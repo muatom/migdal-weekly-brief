@@ -230,6 +230,7 @@ a:hover{text-decoration:underline}
 }
 .nofind .lbl{display:block; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--mig-gray-500); margin-bottom:3px}
 .nofind p{margin:0; font-size:14px; line-height:1.5; color:var(--mig-ink-2)}
+.nofind strong{font-weight:700; color:var(--mig-ink)}
 .nofind button{
   background:none; border:0; padding:2px 0; cursor:pointer; flex:none;
   font-family:var(--font); font-size:13px; font-weight:700; color:var(--mig-blue);
@@ -608,8 +609,8 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
   <!-- ============ נסרק ולא נמצא ============ -->
   <section class="nofind">
     <div>
-      <span class="lbl">נסרק ולא נמצא</span>
-      <p>רכישות סוכנויות · מהלכי <span class="n">AI</span> של מתחרות · חוזרי רגולציה חדשים · פריט שניתן לתייג לנדבך האפקטיביות והעלויות.</p>
+      <span class="lbl">מה נסרק ולא נמצא בו כלום</span>
+      <p>השבוע <strong>לא נמצא אף פריט</strong> בזירות האלה: רכישות סוכנויות · מהלכי <span class="n">AI</span> של מתחרות · חוזרי רגולציה חדשים · הגברת האפקטיביות והקטנת עלויות.</p>
     </div>
     <button type="button" id="copyNofind">העתק</button>
   </section>
@@ -1265,8 +1266,8 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
 
   /* ---------- ״נסרק ולא נמצא״ ---------- */
   document.getElementById("copyNofind").addEventListener("click", function(){
-    copy("בסריקת " + ISSUE + " לא נמצאו פריטים בנושאים: רכישות סוכנויות, מהלכי AI של מתחרות, " +
-         "חוזרי רגולציה חדשים, ופריט שניתן לתייג לנדבך הגברת האפקטיביות והקטנת העלויות.\n" +
+    copy("בסריקת " + ISSUE + " לא נמצא אף פריט בזירות: רכישות סוכנויות · מהלכי AI של מתחרות · " +
+         "חוזרי רגולציה חדשים · הגברת האפקטיביות והקטנת עלויות.\n" +
          "מקורות שנסרקו: עיתון פוליסה · עדיף · פאנדר · אתר מגדל · חיפוש רשת.\n" + SITE,
          "הועתק");
   });
