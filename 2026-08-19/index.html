@@ -20,12 +20,11 @@
 <meta name="theme-color" content="#020140">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="מבט שבועי">
-<link rel="apple-touch-icon" href="assets/icon-180.png">
-<link rel="icon" href="assets/icon-192.png" sizes="192x192">
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="icon" href="../assets/icon-192.png" sizes="192x192">
 
-<link rel="preload" as="font" type="font/otf" href="assets/fonts/1_Migdal_RagSans-Light.otf" crossorigin>
-<link rel="preload" as="font" type="font/otf" href="assets/fonts/1_Migdal_RagSans-Black.otf" crossorigin>
+<link rel="preload" as="font" type="font/otf" href="../assets/fonts/1_Migdal_RagSans-Light.otf" crossorigin>
+<link rel="preload" as="font" type="font/otf" href="../assets/fonts/1_Migdal_RagSans-Black.otf" crossorigin>
 
 <style>
 /* ============================================================
@@ -33,10 +32,10 @@
    דיזיין סיסטם: מגדל. RTL. מובייל-first, פריסת web מלאה מ-1024px.
    ============================================================ */
 
-@font-face { font-family:"Migdal RagSans"; src:url("assets/fonts/1_Migdal_RagSans-ExtraLight.otf") format("opentype"); font-weight:100 275;  font-style:normal; font-display:swap; }
-@font-face { font-family:"Migdal RagSans"; src:url("assets/fonts/1_Migdal_RagSans-Light.otf") format("opentype");      font-weight:300 450;  font-style:normal; font-display:swap; }
-@font-face { font-family:"Migdal RagSans"; src:url("assets/fonts/1_Migdal_RagSans-Bold.otf") format("opentype");       font-weight:500 800;  font-style:normal; font-display:swap; }
-@font-face { font-family:"Migdal RagSans"; src:url("assets/fonts/1_Migdal_RagSans-Black.otf") format("opentype");      font-weight:850 1000; font-style:normal; font-display:swap; }
+@font-face { font-family:"Migdal RagSans"; src:url("../assets/fonts/1_Migdal_RagSans-ExtraLight.otf") format("opentype"); font-weight:100 275;  font-style:normal; font-display:swap; }
+@font-face { font-family:"Migdal RagSans"; src:url("../assets/fonts/1_Migdal_RagSans-Light.otf") format("opentype");      font-weight:300 450;  font-style:normal; font-display:swap; }
+@font-face { font-family:"Migdal RagSans"; src:url("../assets/fonts/1_Migdal_RagSans-Bold.otf") format("opentype");       font-weight:500 800;  font-style:normal; font-display:swap; }
+@font-face { font-family:"Migdal RagSans"; src:url("../assets/fonts/1_Migdal_RagSans-Black.otf") format("opentype");      font-weight:850 1000; font-style:normal; font-display:swap; }
 
 :root{
   --mig-ink:#020140; --mig-ink-2:#212058;
@@ -192,7 +191,7 @@ a:hover{text-decoration:underline}
 .lead::after{
   content:""; position:absolute; inset-inline-start:-18px; bottom:-24px;
   width:150px; height:150px; opacity:.09; pointer-events:none;
-  background:url("assets/migdal-tower.png") no-repeat center/contain;
+  background:url("../assets/migdal-tower.png") no-repeat center/contain;
   filter:brightness(0) invert(1);
 }
 .lead > *{position:relative; z-index:1}
@@ -510,7 +509,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
 
 <header class="siteheader">
   <div class="shell bar">
-    <img src="assets/migdal-logo.png" alt="מגדל">
+    <img src="../assets/migdal-logo.png" alt="מגדל">
     <span class="bar-title">מבט שבועי תחרותי <span>13–19 באוגוסט 2026</span></span>
     <span class="progress" id="readProgress" hidden></span>
     <button class="cta cta-sm" data-play type="button">
@@ -1137,7 +1136,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
   <div class="pl-frame" id="plFrame">
     <div class="pl-bars" id="plBars" aria-hidden="true"></div>
     <div class="pl-head">
-      <img src="assets/migdal-logo-white.png" alt="מגדל">
+      <img src="../assets/migdal-logo-white.png" alt="מגדל">
       <div class="grp">
         <button class="pl-icon" id="plPause" type="button" aria-label="השהיה">
           <svg id="plPauseIcon" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1"/><rect x="8.5" y="1" width="3.5" height="12" rx="1"/></svg>
