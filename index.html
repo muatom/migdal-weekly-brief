@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>מבט שבועי תחרותי · 13–19 באוגוסט 2026</title>
-<meta name="description" content="סקירת שוק תחרותית שבועית — ביטוח ופיננסים בישראל, 13–19 באוגוסט 2026. כל פריט מתויג לנדבך אסטרטגי, עם מקור ותאריך פרסום.">
+<meta name="description" content="סקירת שוק תחרותית שבועית — ביטוח ופיננסים בישראל, 13–19 באוגוסט 2026. פריט נכנס רק אם הוא עובר טריגר: תזוזה, מהלך או איתות.">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:url" content="https://muatom.github.io/weekly-competitive-brief/">
 <meta property="og:title" content="מבט שבועי תחרותי · 13–19 באוגוסט 2026">
-<meta property="og:description" content="מגדל פותחת את עונת הדוחות עם תשואה להון 22.4% · מיטב מגדילה נתח שוק ל-14.3% · רשות שוק ההון דורשת תיעוד הצבעות משלוש שנים. עובדות ומקורות בלבד.">
+<meta property="og:description" content="הצבירה נטו של כלל בפנסיה ובגמל זינקה פי 5.8 · רשות שוק ההון דורשת דיון על AI התקפי עד 10.9 · מיטב מעלה דמי ניהול ונתח שוק יחד. עובדות ומקורות בלבד.">
 <meta property="og:image" content="https://muatom.github.io/weekly-competitive-brief/assets/share-card-2026-08-19.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -223,20 +223,6 @@ a:hover{text-decoration:underline}
   .chips li + li{border-top:1px solid rgba(255,255,255,.10)}
 }
 
-/* ---------------- נסרק ולא נמצא ---------------- */
-.nofind{
-  display:flex; align-items:center; gap:14px; justify-content:space-between;
-  margin:16px 0 0; background:var(--mig-mist); border-radius:12px; padding:12px 16px;
-}
-.nofind .lbl{display:block; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--mig-gray-500); margin-bottom:3px}
-.nofind p{margin:0; font-size:14px; line-height:1.5; color:var(--mig-ink-2)}
-.nofind strong{font-weight:700; color:var(--mig-ink)}
-.nofind button{
-  background:none; border:0; padding:2px 0; cursor:pointer; flex:none;
-  font-family:var(--font); font-size:13px; font-weight:700; color:var(--mig-blue);
-}
-.nofind button:hover{text-decoration:underline}
-
 /* ---------------- פריסת התוכן ---------------- */
 .section-title{margin:32px 0 12px; font-size:12px; font-weight:700; letter-spacing:.08em; color:var(--mig-gray-500)}
 @media (min-width:1024px){
@@ -269,6 +255,11 @@ a:hover{text-decoration:underline}
 }
 .context .lbl{display:block; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--mig-blue); margin:0 0 3px}
 .context p{margin:0; font-size:14px; line-height:1.6; color:var(--mig-ink-2)}
+
+/* שורת איתות — מה נוחת · מתי · על מי. הסימון היחיד שנוסף (04-output-format) */
+.signal{margin:11px 0 0; font-size:13.5px; line-height:1.55; color:var(--mig-ink-2)}
+.signal .lbl{font-weight:700; color:var(--mig-blue)}
+.signal .lbl::after{content:" · "; font-weight:400; color:var(--mig-gray-500)}
 
 /* שורת מקור + פתיחה */
 details{margin:14px 0 0; border-top:1px solid var(--mig-line-soft); padding-top:10px}
@@ -319,16 +310,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
 .lead .actions .sep{color:rgba(255,255,255,.3)}
 .lead .actions button[aria-pressed="true"]{color:#fff}
 
-/* ---------------- פריטים רזים ---------------- */
-.thin{background:var(--mig-white); border:1px solid var(--mig-line-soft); border-radius:16px; padding:16px}
-.thin > p.sub{margin:0 0 10px; font-size:13px; color:var(--mig-gray-500)}
-.thin ol{margin:0; padding:0; list-style:none}
-.thin li{padding:11px 0; border-top:1px solid var(--mig-line-soft); scroll-margin-top:calc(var(--header-h) + 16px)}
-.thin li:first-child{border-top:0}
-.thin .t{display:block; font-size:14px; font-weight:700; line-height:1.45; color:var(--mig-ink-2)}
-.thin .m{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:5px; font-size:12px; color:var(--mig-gray-500)}
-
-/* ---------------- על הרדאר / לולאות פתוחות ---------------- */
+/* ---------------- על הרדאר ---------------- */
 .radar{background:var(--mig-mist); border-radius:16px; padding:16px}
 .radar .sub{margin:0 0 12px; font-size:13px; font-weight:700; color:var(--mig-ink-2)}
 .radar ol{margin:0; padding:0; list-style:none}
@@ -337,23 +319,6 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
 .radar .t{display:block; font-size:14px; font-weight:700; line-height:1.45; color:var(--mig-ink-2)}
 .radar .m{display:block; margin-top:3px; font-size:12px; color:var(--mig-gray-700)}
 @media (min-width:1024px){ .radar{padding:20px 22px} }
-
-.openloops{
-  margin:16px 0 0; background:var(--mig-white); border:1px solid var(--mig-line-soft);
-  border-radius:16px; padding:16px;
-}
-.openloops h3{margin:0 0 4px; font-size:14px; font-weight:700; color:var(--mig-ink)}
-.openloops .sub{margin:0 0 10px; font-size:12px; color:var(--mig-gray-500)}
-.openloops ul{margin:0; padding:0; list-style:none}
-.openloops li{
-  position:relative; padding:0 0 0 0; margin:0 0 10px; padding-inline-start:14px;
-  font-size:13px; line-height:1.6; color:var(--mig-ink-2);
-}
-.openloops li::before{content:""; position:absolute; inset-inline-start:0; top:8px; width:5px; height:5px; border-radius:50%; background:var(--mig-blue)}
-.openloops li:last-child{margin-bottom:0}
-.openloops .subhead{margin:14px 0 8px; padding-top:12px; border-top:1px solid var(--mig-line-soft);
-  font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--mig-gray-500)}
-.openloops .foot{margin:12px 0 0; font-size:12px; line-height:1.5; color:var(--mig-gray-500); border-top:1px solid var(--mig-line-soft); padding-top:10px}
 
 /* ---------------- לוח 2028 ---------------- */
 .scoreboard{margin:16px 0 0; background:var(--mig-white); border:1px solid var(--mig-line-soft); border-radius:16px; padding:16px}
@@ -492,10 +457,10 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
   .layout,.colophon-grid,.lead-grid{display:block !important}
   .colophon dl{columns:1}
   summary .toggle{display:none}
-  .card,.lead,.radar,.thin,.openloops,.scoreboard{break-inside:avoid; box-shadow:none}
+  .card,.lead,.radar,.scoreboard{break-inside:avoid; box-shadow:none}
   .radar{break-before:page}
   .more a[href^="http"]::after{content:" — " attr(href); font-size:10px; word-break:break-all; color:#6a7282; unicode-bidi:isolate; direction:ltr}
-  .lead,.tag,.context,.radar,.notfound,.saved-strip{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  .lead,.tag,.context,.signal,.radar,.saved-strip{-webkit-print-color-adjust:exact; print-color-adjust:exact}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -506,7 +471,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
 </head>
 <body>
 
-<a class="skip" href="#migdal-q2-2026">לתוכן המבט</a>
+<a class="skip" href="#clal-net-accumulation">לתוכן המבט</a>
 
 <header class="siteheader">
   <div class="shell bar">
@@ -526,17 +491,17 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
     <div class="meta">
       <h1>מבט שבועי תחרותי</h1>
       <p class="range">13–19 באוגוסט 2026</p>
-      <p class="contract">חיזוק פעילות ליבה — שישה · הלקוח במרכז — שלושה · הגברת אפקטיביות והקטנת עלויות — אחד, וגם הוא של ספק חיצוני ולא של חברת ביטוח.</p>
-      <p class="reading" id="readingLine">שבוע פתיחת עונת הדוחות · לא נוספו פריטים כדי למלא מכסה · <span id="readFull">קריאה מלאה: כ-6 דקות</span> · <span id="playLen">הנגן: כ-54 שניות</span></p>
+      <p class="contract">חיזוק פעילות ליבה — שלושה פריטים · הגברת אפקטיביות והקטנת עלויות — שניים · הלקוח במרכז — שניים. שלושת הנדבכים מיוצגים.</p>
+      <p class="reading" id="readingLine">החלון נסגר 19.8 ב-23:59 · <span id="readFull">קריאה מלאה: כ-5 דקות</span> · <span id="playLen">הנגן: כ-55 שניות</span></p>
     </div>
     <button class="cta" data-play type="button">
       <svg viewBox="0 0 10 12" fill="currentColor" aria-hidden="true"><path d="M10 0v12L0 6z"/></svg>
       נגן את השבוע
     </button>
     <ul class="mast-stats">
-      <li><b>10</b><span>פריטים בבריף</span></li>
-      <li><b>8</b><span>אומתו מול הכתבה</span></li>
-      <li><b id="readMins">70</b><span id="readTime">שניות סריקה</span></li>
+      <li><b>7</b><span>פריטים בבריף</span></li>
+      <li><b>7</b><span>נקראו מול הכתבה</span></li>
+      <li><b id="readMins">90</b><span id="readTime">שניות סריקה</span></li>
     </ul>
   </div>
 
@@ -544,93 +509,83 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
   <nav class="tldr" aria-label="תקציר השבוע">
     <h2>בשלוש שורות</h2>
     <ol>
-      <li><a href="#migdal-q2-2026">מגדל פתחה את עונת הדוחות ראשונה מבין הגדולות — תשואה להון 22.4% ונכסים 631 מיליארד ₪</a></li>
-      <li><a href="#meitav-q2-2026">מיטב הגדילה את נתח השוק בפנסיה ובגמל מכ-13% ל-14.3% ברבעון אחד</a></li>
-      <li><a href="#cma-institutional-voting">רשות שוק ההון דורשת מכל המוסדיים תיעוד הצבעות משלוש שנים — עד 2 בספטמבר</a></li>
+      <li><a href="#clal-net-accumulation">כלל הכפילה פי 5.8 את הצבירה נטו בפנסיה ובגמל — 11 מיליארד ₪ במחצית מול 1.9</a></li>
+      <li><a href="#cma-ai-cyber">רשות שוק ההון דורשת דיון בוועדת היגוי על AI התקפי — עד 10 בספטמבר, וזה נוחת על מגדל</a></li>
+      <li><a href="#meitav-q2-2026">מיטב העלתה את דמי הניהול הממוצעים ואת נתח השוק יחד — ומדווחת 55% מהתקשורת הכתובה בסוכני AI</a></li>
     </ol>
   </nav>
 
   <!-- ============ כותרת השבוע ============ -->
-  <article class="lead" id="migdal-q2-2026"
+  <article class="lead" id="clal-net-accumulation"
     data-story data-ms="9000"
-    data-pillar="חיזוק פעילות ליבה" data-actor="מגדל"
-    data-source="כלכליסט · גלובס · ביזפורטל · אייס" data-date="פורסם 17.8.2026" data-verified="1"
-    data-url="https://www.calcalist.co.il/market/article/l86c5zm4k"
-    data-caveat-short="שני חתכים שונים במקורות: אייס וכלכליסט מדווחים רווחי ליבה, TheMarker וגלובס רווח כולל לפני מס. אין לערבב ביניהם."
-    data-story-facts="רווח כולל 575 מיליון ₪ ברבעון ו-897 מיליון ₪ במחצית, עלייה של כ-9%.|תשואה להון 22.4% ברבעון, לעומת יעד אסטרטגי של 16%–18%.|נכסים מנוהלים 631 מיליארד ₪ בסוף יוני, מול 583 מיליארד בסוף 2025.">
+    data-pillar="חיזוק פעילות ליבה" data-actor="כלל ביטוח"
+    data-source="פאנדר · ביזפורטל · ספונסר" data-date="פורסם 19.8.2026" data-verified="1"
+    data-url="https://www.funder.co.il/article/207882"
+    data-caveat-short="צבירה נטו אינה דמי גמולים. למגדל לא פורסם נתון צבירה נטו מקביל, ואין להעמיד את המספרים זה מול זה."
+    data-story-facts="הצבירה נטו של כלל בפנסיה ובגמל: מעל 11 מיליארד ₪ במחצית, מול כ-1.9 מיליארד אשתקד.|הנכסים המנוהלים של כלל: 456 מיליארד ₪, עלייה של 16% בשנה. מגדל: 631 מיליארד.|תשואה להון ברבעון: כלל 22.5%, מגדל 22.4% — פער של עשירית האחוז.">
     <p class="eyebrow">כותרת השבוע</p>
     <div class="lead-grid">
       <div>
         <div class="meta-row">
           <span class="tag">חיזוק פעילות ליבה</span>
-          <span class="tag tag-actor">מגדל</span>
+          <span class="tag tag-actor">כלל ביטוח</span>
           <span class="saved-pill">נשמר</span>
-          <span class="date">פורסם 17.8.2026</span>
+          <span class="date">פורסם 19.8.2026</span>
         </div>
-        <h2>מגדל פותחת את עונת הדוחות: <span class="n">897</span> מיליון ₪ רווח כולל במחצית, תשואה להון <span class="n">22.4%</span></h2>
+        <h2>הצבירה נטו של כלל בפנסיה ובגמל זינקה <span class="n">פי 5.8</span> — <span class="n">11</span> מיליארד ₪ במחצית</h2>
         <p class="facts">
-          מגדל הייתה הראשונה מבין חמש הגדולות שדיווחה. הרווח הכולל ברבעון: 575 מיליון ₪; במחצית 897 מיליון ₪, עלייה של כ-9%.
-          הרווח מפעילות הליבה ברבעון: 731 מיליון ₪, שיא לחברה.
+          כלל פרסמה את דוחות המחצית יומיים אחרי מגדל. הצבירה נטו בפנסיה ובגמל הסתכמה במחצית הראשונה במעל <span class="n">11</span> מיליארד ₪,
+          לעומת כ-<span class="n">1.9</span> מיליארד ₪ בתקופה המקבילה — תזוזה של כ-9.1 מיליארד ₪ בחצי שנה.
+          הנכסים המנוהלים הגיעו לשיא של <span class="n">456</span> מיליארד ₪, עלייה של <span class="n">16%</span>.
         </p>
         <div class="context" style="background:rgba(255,255,255,.07); border-inline-start-color:var(--mig-green)">
           <span class="lbl" style="color:var(--mig-green)">הקשר עובדתי</span>
           <p style="color:rgba(255,255,255,.92)">
-            יעד התשואה להון בתוכנית האסטרטגית הוא <span class="n">16%–18%</span>; בפועל ברבעון — <span class="n">22.4%</span>.
-            הנכסים המנוהלים: <span class="n">631</span> מיליארד ₪ מול 583 מיליארד בסוף 2025 ויעד 2028 של 750–850.
+            מגדל דיווחה ב-17.8 על נכסים מנוהלים של <span class="n">631</span> מיליארד ₪ ותשואה להון של <span class="n">22.4%</span> ברבעון.
+            כלל דיווחה <span class="n">22.5%</span>. הפער בתשואה להון הוא עשירית האחוז; הפער בכיוון תנועת הכספים אינו.
           </p>
         </div>
       </div>
       <ul class="chips">
-        <li>575 מיליון ₪ ברבעון</li>
-        <li>897 מיליון ₪ במחצית, +9%</li>
-        <li>731 מיליון ₪ רווחי ליבה</li>
-        <li>22.4% תשואה להון</li>
-        <li>631 מיליארד ₪ נכסים</li>
+        <li>11 מיליארד ₪ צבירה נטו</li>
+        <li>פי 5.8 מול אשתקד</li>
+        <li>456 מיליארד ₪ נכסים</li>
+        <li>22.5% תשואה להון</li>
+        <li>614 מיליון ₪ רווח ברבעון</li>
       </ul>
     </div>
 
     <details>
       <summary>
-        <span>מקור: כלכליסט · גלובס · ביזפורטל · אייס · TheMarker</span>
+        <span>מקור: פאנדר · ביזפורטל · ספונסר · גלובס</span>
         <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
           <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
         </span>
       </summary>
       <div class="more" style="color:rgba(255,255,255,.84)">
-        <p class="subhead" style="color:#fff">רווחי הליבה לפי מגזר, רבעון שני</p>
-        <p>הרווח הכולל ברבעון הסתכם ב-575 מיליון ₪ לעומת 571 מיליון ₪ ברבעון המקביל; במחצית 897 מיליון ₪ לעומת כ-825 מיליון ₪. הנכסים המנוהלים: כ-631 מיליארד ₪ בסוף יוני.</p>
+        <p class="subhead" style="color:#fff">המספרים של כלל</p>
         <ul>
-          <li>חיסכון ארוך טווח: <span class="n">239</span> מיליון ₪, עלייה של <span class="n">32%</span>.</li>
-          <li>בריאות: <span class="n">181</span> מיליון ₪, עלייה של <span class="n">9.7%</span>.</li>
-          <li>ביטוח כללי: <span class="n">111</span> מיליון ₪, <strong>ירידה של <span class="n">38%</span></strong> — המגזר היחיד שירד. הירידה מיוחסת בכתבות להפסד בביטוח רכב רכוש על רקע שחיקת הפרמיה הממוצעת.</li>
-        </ul>
-        <p class="subhead" style="color:#fff; margin-top:14px">הון, סולבנסי ודיבידנד</p>
-        <ul>
-          <li>יחס כושר פירעון: <span class="n">119%</span> ללא הוראות המעבר ו-<span class="n">144%</span> עמן — מעל סף ה-<span class="n">115%</span> המאפשר חלוקת דיבידנד.</li>
-          <li>ההון הכולל: כ-<span class="n">20.8</span> מיליארד ₪, עלייה של כ-<span class="n">8%</span> מסוף 2025.</li>
-          <li>מגדל מסרה שהיא מתכננת לחזור לחלוקת דיבידנד מ-2027. לא הוכרז דיבידנד ברבעון השני.</li>
-          <li>יתרת ה-<span class="n">CSM</span> הכוללת: <span class="n">15.3</span> מיליארד ₪; ה-<span class="n">CSM</span> מעסק חדש הוכפל ל-<span class="n">242</span> מיליון ₪.</li>
-        </ul>
-        <p class="subhead" style="color:#fff; margin-top:14px">גבייה וצמיחה</p>
-        <ul>
-          <li>פרמיות ודמי גמולים במחצית: <span class="n">19.3</span> מיליארד ₪, גידול של כ-<span class="n">20%</span>.</li>
-          <li>דמי הגמולים בקרנות הפנסיה עלו בכ-<span class="n">16%</span> ובקופות הגמל בכ-<span class="n">38%</span>.</li>
-          <li>דמי ניהול משתנים שנגבו במחצית: כ-<span class="n">632</span> מיליון ₪.</li>
-          <li>תיק הנוסטרו מתקרב ל-<span class="n">70</span> מיליארד ₪; רכיב האג״ח הממשלתיות והמזומן ירד מכ-<span class="n">40%</span> ל-<span class="n">30%–35%</span>, עם יעד של <span class="n">15%–20%</span> (מפי ההנהלה, אייס).</li>
+          <li>רווח כולל לאחר מס ברבעון: <span class="n">614</span> מיליון ₪ מול 531 מיליון ₪ ברבעון המקביל — עלייה של <span class="n">16%</span>.</li>
+          <li>רווח מעסקי ליבה לפני מס ברבעון: <span class="n">732</span> מיליון ₪ (+21%); במחצית 1.32 מיליארד ₪ (+18%).</li>
+          <li>תשואה להון: <span class="n">22.5%</span> ברבעון, <span class="n">19.8%</span> בחציון.</li>
+          <li>הון מיוחס לבעלי המניות ב-30.6.2026: כ-<span class="n">11.5</span> מיליארד ₪, עלייה של 7% מסוף 2025.</li>
+          <li>דירקטוריון כלל החזקות אישר <strong>לראשונה בתולדות החברה</strong> תוכנית רכישה עצמית של עד <span class="n">200</span> מיליון ₪, במקביל לדיבידנד ביניים של 200 מיליון ₪ מכלל ביטוח.</li>
+          <li>יחס כושר פירעון מוערך של כלל ביטוח לסוף מרץ, אחרי הדיבידנד: <span class="n">180%</span> עם הוראות הפריסה, <span class="n">155%</span> בלעדיהן.</li>
         </ul>
         <blockquote class="quote" style="background:rgba(255,255,255,.08); color:#fff">
-          ״אנו מסכמים את המחצית עם רווח שיא מפעילות הליבה״
-          <cite style="color:rgba(255,255,255,.66)">רונן אגסי, מנכ״ל מגדל ביטוח ופיננסים</cite>
+          ״מגמת צמיחה מואצת, הנתמכת בין השאר על ידי הובלה בתשואות לאורך זמן״
+          <cite style="color:rgba(255,255,255,.66)">יורם נוה, מנכ״ל כלל ביטוח</cite>
         </blockquote>
         <p class="note" data-caveat style="background:rgba(255,255,255,.08); color:rgba(255,255,255,.9); border-color:rgba(255,255,255,.25)">
-          שימו לב לפני שימוש בישיבה: המקורות מדווחים שני חתכים שונים. אייס וכלכליסט מדווחים <strong>רווחי ליבה</strong> (ביטוח כללי 111 מיליון ₪, ירידה של 38%); TheMarker וגלובס מדווחים <strong>רווח כולל לפני מס</strong> (ביטוח כללי 148 מיליון ₪ לעומת 250 מיליון ₪). אלה שני מדדים שונים ואין לערבב ביניהם באותה שקופית.
+          <strong>שתי מדידות שונות — אל תעמידו אותן זו מול זו.</strong> ״צבירה נטו״ אינה ״דמי גמולים״.
+          למגדל <strong>לא פורסם</strong> נתון צבירה נטו מקביל; מה שמגדל פרסמה ב-17.8 הוא דמי גמולים — פנסיה +16% וגמל +38% במחצית.
+          ההשוואות הלגיטימיות היחידות בין שתי החברות הן נכסים מנוהלים, תשואה להון ורווח כולל, כולן לאותה תקופה ובאותה הגדרה.
         </p>
         <p class="srclinks" style="color:rgba(255,255,255,.66)">
           לכתבות:
-          <a href="https://www.calcalist.co.il/market/article/l86c5zm4k" target="_blank" rel="noopener" style="color:var(--mig-green)">כלכליסט — ״דוחות מגדל: רווח של 575 מיליון שקל ותשואה להון של 22.4%״, 17.8.2026</a> ·
-          <a href="https://www.globes.co.il/news/article.aspx?did=1001552506" target="_blank" rel="noopener" style="color:var(--mig-green)">גלובס — ״יריית הפתיחה לדוחות הביטוח: מגדל הרוויחה כ-900 מיליון שקל במחצית״, 17.8.2026</a> ·
-          <a href="https://www.bizportal.co.il/capitalmarket/news/article/20039065" target="_blank" rel="noopener" style="color:var(--mig-green)">ביזפורטל — ״מגדל: הרווח הכולל ברבעון הסתכם ב-575 מיליון שקל״, 17.8.2026</a> ·
-          <a href="https://www.ice.co.il/finance/news/article/1125856" target="_blank" rel="noopener" style="color:var(--mig-green)">אייס — ״מגדל מציגה: תשואה להון של 22.4%״, 17.8.2026</a>
+          <a href="https://www.funder.co.il/article/207882" target="_blank" rel="noopener" style="color:var(--mig-green)">פאנדר — דוחות כלל ביטוח לרבעון השני, 19.8.2026</a> ·
+          <a href="https://www.bizportal.co.il/capitalmarket/news/article/20039497" target="_blank" rel="noopener" style="color:var(--mig-green)">ביזפורטל — כלל: הרווח הכולל ברבעון 614 מיליון שקל, 19.8.2026</a> ·
+          <a href="https://www.sponser.co.il/Article.aspx?ArticleID=123006" target="_blank" rel="noopener" style="color:var(--mig-green)">ספונסר — כלל החזקות מאשרת רכישה עצמית, 19.8.2026</a>
         </p>
       </div>
     </details>
@@ -638,136 +593,20 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
     <div class="actions" data-actions></div>
   </article>
 
-  <!-- ============ נסרק ולא נמצא ============ -->
-  <section class="nofind">
-    <div>
-      <span class="lbl">מה נסרק ולא נמצא בו כלום</span>
-      <p>השבוע <strong>לא נמצא אף פריט</strong> בזירות האלה: דוחות רבעון שני של הראל, הפניקס, כלל ומנורה · נתוני ניוד כספים בפנסיה · רכישות סוכנויות ותיקי ביטוח · מינויים ועזיבות בהנהלות · ומהלך <span class="n">AI</span> תפעולי של חברת ביטוח ישראלית.</p>
-    </div>
-    <button type="button" id="copyNofind">העתק</button>
-  </section>
-
   <!-- ============ גוף ============ -->
   <div class="layout">
 
     <main class="col-main">
       <h2 class="section-title">מה עוד קרה השבוע</h2>
 
-      <!-- 1 · מיטב -->
-      <article class="card" id="meitav-q2-2026"
-        data-story data-ms="8000"
-        data-pillar="חיזוק פעילות ליבה" data-actor="מיטב"
-        data-source="ביזפורטל · אייס · פאנדר" data-date="פורסם 17.8.2026" data-verified="1"
-        data-url="https://www.bizportal.co.il/capitalmarket/news/article/20039076"
-        data-story-facts="רווח 142 מיליון ₪ ברבעון, עלייה של 31% לעומת הרבעון המקביל.|נכסים מנוהלים 464.5 מיליארד ₪, עלייה של 13.6% מסוף 2025.|נתח השוק בפנסיה ובגמל עלה לכ-14.3% לעומת כ-13% בסוף 2025.">
-        <div class="meta-row">
-          <span class="tag">חיזוק פעילות ליבה</span>
-          <span class="tag tag-actor">מיטב</span>
-          <span class="saved-pill">נשמר</span>
-          <span class="date">פורסם 17.8.2026</span>
-        </div>
-        <h3>מיטב מגדילה את נתח השוק בפנסיה ובגמל ל-<span class="n">14.3%</span> — רווח <span class="n">142</span> מיליון ₪ ברבעון</h3>
-        <p class="facts">
-          הרווח המיוחס לבעלי המניות עלה ב-<span class="n">31%</span> ל-142 מיליון ₪, וההכנסות ל-614 מיליון ₪.
-          הנכסים המנוהלים: <span class="n">464.5</span> מיליארד ₪ בסוף יוני, עלייה של <span class="n">13.6%</span> מסוף 2025. הגיוסים נטו ברבעון: יותר מ-14 מיליארד ₪.
-        </p>
-        <div class="context">
-          <span class="lbl">הקשר עובדתי</span>
-          <p>נתח השוק של מיטב בפנסיה ובגמל עלה לכ-<span class="n">14.3%</span> לעומת כ-<span class="n">13%</span> בסוף 2025.</p>
-        </div>
-        <details>
-          <summary>
-            <span>מקור: ביזפורטל · אייס · פאנדר</span>
-            <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
-              <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
-            </span>
-          </summary>
-          <div class="more">
-            <ul>
-              <li>ההכנסות ברבעון: 614 מיליון ₪ לעומת 478 מיליון ₪ ברבעון המקביל, מתוכן <span class="n">414</span> מיליון ₪ מניהול נכסים. הנכסים גדלו מכ-409 מיליארד ₪ בסוף 2025.</li>
-              <li>ה-<span class="n">EBITDA</span> המנוטרלת עלתה ב-<span class="n">33%</span> ל-265 מיליון ₪; שיעור ה-<span class="n">EBITDA</span> הגיע לשיא של <span class="n">43.2%</span>, לעומת <span class="n">42.3%</span> ברבעון הראשון של 2026.</li>
-              <li>הרווח התפעולי: <span class="n">224</span> מיליון ₪, עלייה של <span class="n">37%</span>. הרווח למניה: <span class="n">1.70</span> ₪, עלייה של <span class="n">23%</span>.</li>
-              <li>הרווח הנקי הכולל: <span class="n">151</span> מיליון ₪, עלייה של <span class="n">25%</span>.</li>
-            </ul>
-            <blockquote class="quote">
-              ״החברה צופה כעת כי הרווחיות בשנת 2026 תגדל ביותר מ-25% לעומת 2025, בכפוף לתנאי השוק בחודשים שנותרו עד סוף השנה״
-              <cite>אילן רביב, מנכ״ל מיטב</cite>
-            </blockquote>
-            <p class="note">הבדל בין מקורות: פאנדר ו-investing.com נוקבים בכ-463 מיליארד ₪ נכסים מנוהלים ללא השקעות אלטרנטיביות; ביזפורטל ואייס נוקבים ב-464.5 מיליארד ₪ כסך הכול.</p>
-            <p class="srclinks">
-              לכתבות:
-              <a href="https://www.bizportal.co.il/capitalmarket/news/article/20039076" target="_blank" rel="noopener">ביזפורטל — ״מיטב: הרווח המיוחס לבעלי המניות עלה ב-31% ל-142 מיליון שקל״, 17.8.2026</a> ·
-              <a href="https://www.funder.co.il/article/207685" target="_blank" rel="noopener">פאנדר — ״דוחות מיטב: זינוק ברווח הנקי ל-142 מיליון שקל ברבעון השני״, 17.8.2026</a> ·
-              <a href="https://www.ice.co.il/finance/news/article/1125879" target="_blank" rel="noopener">אייס — ״מיטב שוברת שיאים״, 17.8.2026</a>
-            </p>
-          </div>
-        </details>
-        <div class="actions" data-actions></div>
-      </article>
-
-      <!-- 2 · רשות שוק ההון — הצבעות המוסדיים -->
-      <article class="card" id="cma-institutional-voting"
-        data-story data-ms="8000"
-        data-pillar="חיזוק פעילות ליבה" data-actor="רשות שוק ההון"
-        data-source="גלובס · TheMarker · כלכליסט · פאנדר" data-date="פורסם 17.8.2026" data-verified="1"
-        data-url="https://www.globes.co.il/news/article.aspx?did=1001552567"
-        data-story-facts="כל הגופים המוסדיים נדרשים להעביר תיעוד הצבעות משלוש שנים עד 2 בספטמבר 2026.|מדובר במאות הצבעות לכל גוף, אצל מוסדיים שמנהלים כ-3.5 טריליון ₪.|במקביל בלמה הרשות את מהלך מור באוריון — 25.1% החזקה ובקשה לארבעה דירקטורים.">
-        <div class="meta-row">
-          <span class="tag">חיזוק פעילות ליבה</span>
-          <span class="tag tag-actor">רשות שוק ההון</span>
-          <span class="saved-pill">נשמר</span>
-          <span class="date">פורסם 17.8.2026</span>
-        </div>
-        <h3>רשות שוק ההון דורשת מכל המוסדיים תיעוד הצבעות משלוש שנים — ובולמת את מור באוריון</h3>
-        <p class="facts">
-          הרשות, בראשות עמית גל, דורשת מכלל הגופים המוסדיים תיעוד מפורט של הצבעותיהם באסיפות בעלי מניות מאוגוסט 2023 ועד סוף יולי 2026, <strong>עד 2 בספטמבר 2026</strong>.
-          הגופים שבפיקוח מנהלים כ-<span class="n">3.5</span> טריליון ₪, ומדובר במאות הצבעות לכל גוף.
-        </p>
-        <div class="context">
-          <span class="lbl">הקשר עובדתי</span>
-          <p>הדרישה מנוסחת ככלל-מערכתית ומופנית לכלל הגופים שבפיקוח הרשות, ולא לגוף מסוים. מגדל אינה מוזכרת בשמה באף אחת מהכתבות.</p>
-        </div>
-        <details>
-          <summary>
-            <span>מקור: גלובס · TheMarker · כלכליסט · פאנדר</span>
-            <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
-              <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
-            </span>
-          </summary>
-          <div class="more">
-            <p class="subhead">מה נדרש בתיעוד</p>
-            <p>מועד האסיפה, שם החברה, נושא ההצבעה, הגורם שיזם אותה, הרוב הנדרש ותוצאות ההצבעה לרבות שיעורי התמיכה, ההתנגדות וההימנעות.</p>
-            <p class="subhead" style="margin-top:14px">מור מול אוריון</p>
-            <ul>
-              <li>מור מחזיקה <span class="n">18.1%</span> מאוריון והפמילי אופיס ״הביתה ליווינג״ <span class="n">7%</span> — יחד <span class="n">25.1%</span>. השניים ביקשו למנות ארבעה דירקטורים באסיפה שנקבעה ל-24.8.2026.</li>
-              <li>עמדת הרשות: החזקה מוסדית בתאגיד ריאלי מוגבלת ל-<span class="n">20%</span>, ושיתוף פעולה למינוי ארבעה דירקטורים חורג ממעורבות מוסדית ראויה ועלול להיחשב ניהול אקטיבי.</li>
-              <li>הרשות דורשת הבהרות גם לגבי הולמס פלייס: מור מכרה <span class="n">7.5%</span> מהחזקותיה (מ-24.25% ל-16.75%) תמורת 51 מיליון ₪, במבנה של הלוואת נון-ריקורס בסך 45 מיליון ₪ שבטוחותיה מניות החברה.</li>
-            </ul>
-            <p class="subhead" style="margin-top:14px">מה הרשות בודקת</p>
-            <ul>
-              <li>האם היו אסיפות שבהן גוף מוסדי לא הצביע אף שהיה מחויב.</li>
-              <li>מצבי ניגוד עניינים, והאם ההצבעה עלתה בקנה אחד עם חובת הנאמנות כלפי החוסכים.</li>
-              <li>ב-18.8.2026 שלח לובי 99 מכתב נגד עמדת הרשות, בטענה שהיא עלולה ליצור ״אפקט מצנן״ שירתיע מוסדיים ממעורבות אקטיבית.</li>
-            </ul>
-            <p class="srclinks">
-              לכתבות:
-              <a href="https://www.globes.co.il/news/article.aspx?did=1001552567" target="_blank" rel="noopener">גלובס — ״הדרישה יוצאת הדופן מהמוסדיים: דווחו על כל הצבעותיכם ב-3 השנים האחרונות״, 17.8.2026</a> ·
-              <a href="https://www.calcalist.co.il/market/article/r111dibcumg" target="_blank" rel="noopener">כלכליסט — ״רשות שוק ההון נגד מור: נבלם ניסיון ההשתלטות על אוריון״, 17.8.2026</a> ·
-              <a href="https://www.funder.co.il/article/207814" target="_blank" rel="noopener">פאנדר — ״עמית גל בודק הצבעות המוסדיים באסיפות חברות ציבוריות מוחזקות״, 18.8.2026</a>
-            </p>
-          </div>
-        </details>
-        <div class="actions" data-actions></div>
-      </article>
-
-      <!-- 3 · Munich Re / At-Bay -->
+      <!-- 1 · Munich Re / At-Bay -->
       <article class="card" id="munichre-atbay"
         data-story data-ms="7000"
         data-pillar="הלקוח במרכז" data-actor="Munich Re"
         data-source="כלכליסט" data-date="פורסם 19.8.2026" data-verified="1"
         data-url="https://www.calcalist.co.il/calcalistech/article/sywzi2zdgg"
         data-caveat-short="כלכליסט מדווחת על דיווח של theinsurer, לא על הודעת חברה. הסכום לא פורסם — ״מאות מיליונים״ היא הערכה."
-        data-story-facts="Munich Re רוכשת את At-Bay הישראלית; הסכום לא פורסם וההערכה בדיווח היא מאות מיליוני דולרים.|At-Bay הוקמה ב-2016 וגייסה 276 מיליון דולר; בגיוס האחרון ב-2021 תומחרה ב-1.35 מיליארד דולר.|המוצר אורז ניטור, אבטחה וניתוח סיכונים יחד עם הכיסוי הביטוחי.">
+        data-story-facts="Munich Re רוכשת את At-Bay הישראלית; הסכום לא פורסם וההערכה בדיווח היא מאות מיליוני דולרים.|At-Bay הוקמה ב-2016, גייסה 276 מיליון דולר, ובגיוס האחרון ב-2021 תומחרה ב-1.35 מיליארד דולר.|המוצר אורז ניטור, אבטחה וניתוח סיכונים יחד עם הכיסוי הביטוחי.">
         <div class="meta-row">
           <span class="tag">הלקוח במרכז</span>
           <span class="tag tag-actor">Munich Re</span>
@@ -781,7 +620,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
         </p>
         <div class="context">
           <span class="lbl">הקשר עובדתי</span>
-          <p>העסקה היא רכישת <span class="n">insurtech</span> ישראלית בידי מבטח-משנה גלובלי, בתחום שבו הכיסוי הביטוחי והשירות הטכנולוגי ארוזים כמוצר אחד.</p>
+          <p>רכישת <span class="n">insurtech</span> ישראלית בידי מבטח-משנה גלובלי, בתחום שבו הכיסוי הביטוחי והשירות הטכנולוגי ארוזים כמוצר אחד.</p>
         </div>
         <details>
           <summary>
@@ -793,13 +632,110 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
           <div class="more">
             <ul>
               <li>מנכ״ל ומייסד: רותם עירם. מייסדים נוספים: רומן איצקוביץ׳, איתי הוכמן וטילי קליסקי.</li>
-              <li>מודל המוצר משלב ניטור, אבטחה וניתוח סיכונים כחלק מהכיסוי הביטוחי.</li>
+              <li>המוצר משלב ניטור, אבטחה וניתוח סיכונים כחלק מהכיסוי הביטוחי.</li>
               <li>בכתבה מצוין שהחברה פיטרה לאחרונה עשרות רבות של עובדים.</li>
             </ul>
             <p class="note" data-caveat>שרשרת המקורות: כלכליסט מדווחת על דיווח של העיתון <span class="n">theinsurer</span>, לא על הודעת חברה. סכום הרכישה לא פורסם שם, ו״מאות מיליוני דולרים״ היא הערכה ולא נתון מדווח.</p>
             <p class="srclinks">
               לכתבה:
-              <a href="https://www.calcalist.co.il/calcalistech/article/sywzi2zdgg" target="_blank" rel="noopener">כלכליסט — ״דיווח: ענקית הביטוח Munich RE רוכשת את At-Bay הישראלית במאות מיליוני דולרים״, 19.8.2026</a>
+              <a href="https://www.calcalist.co.il/calcalistech/article/sywzi2zdgg" target="_blank" rel="noopener">כלכליסט — ״דיווח: ענקית הביטוח Munich RE רוכשת את At-Bay הישראלית״, 19.8.2026</a>
+            </p>
+          </div>
+        </details>
+        <div class="actions" data-actions></div>
+      </article>
+
+      <!-- 2 · Wonderful -->
+      <article class="card" id="wonderful-ai-round"
+        data-story data-ms="7000"
+        data-pillar="הגברת אפקטיביות" data-actor="מנורה מבטחים · ליברה"
+        data-source="גלובס" data-date="פורסם 12.8.2026" data-verified="1"
+        data-url="https://en.globes.co.il/en/article-israeli-ai-agents-co-wonderful-seeks-to-raise-500m-1001552121"
+        data-caveat-short="פורסם 12.8, יום לפני החלון. נכנס כמהלך מבני ולא כמילוי נדבך. סקופ של מקור יחיד."
+        data-story-facts="מנורה מבטחים וליברה מפעילות את סוכני ה-AI של Wonderful במערך שירות הלקוחות.|החברה יצאה לגייס 500 מיליון דולר לפי שווי מבוקש של 5 מיליארד — כפול מהסבב הקודם.|קצב ההכנסות השנתי: 55 מיליון דולר, לעומת כמיליון דולר באוגוסט 2025.">
+        <div class="meta-row">
+          <span class="tag">הגברת אפקטיביות</span>
+          <span class="tag tag-actor">מנורה מבטחים · ליברה</span>
+          <span class="saved-pill">נשמר</span>
+          <span class="date">פורסם 12.8.2026</span>
+        </div>
+        <h3>מנורה מבטחים וליברה מפעילות סוכני <span class="n">AI</span> של <span class="n">Wonderful</span>, שיוצאת לגיוס לפי שווי <span class="n">5</span> מיליארד דולר</h3>
+        <p class="facts">
+          שתי מתחרות מפעילות את סוכני ה-<span class="n">AI</span> של החברה במערכי שירות הלקוחות, לצד בנק הפועלים, בנק דיסקונט, מכבי, בזק ופזגז.
+          החברה יצאה לגייס <span class="n">500</span> מיליון דולר לפי שווי מבוקש של <span class="n">5</span> מיליארד — כפול מהסבב הקודם.
+        </p>
+        <div class="context">
+          <span class="lbl">הקשר עובדתי</span>
+          <p>קצב ההכנסות השנתי עומד על <span class="n">55</span> מיליון דולר, לעומת כמיליון דולר באוגוסט 2025. מצבת העובדים: כ-630, לעומת 90 לפני שנה.</p>
+        </div>
+        <details>
+          <summary>
+            <span>מקור: גלובס</span>
+            <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
+              <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
+            </span>
+          </summary>
+          <div class="more">
+            <ul>
+              <li>הסבב הקודם, 165 מיליון דולר, נסגר שלושה חודשים קודם לכן. סך הגיוסים: <span class="n">290</span> מיליון דולר.</li>
+              <li>החברה פעילה ב-30 מדינות; מייסדים בר וינקלר ורועי ללזר. מתחרותיה: <span class="n">Salesforce</span> ו-<span class="n">Sierra AI</span>.</li>
+            </ul>
+            <p class="note" data-caveat>
+              <strong>הפריט פורסם 12.8.2026 — יום אחד לפני החלון.</strong> הוא נכנס משום שהוא <strong>מהלך מבני</strong>: מתחרות העלו סוכני AI לייצור, וזה יהיה נכון גם בעוד שלושה חודשים.
+              <strong>בגיליון הקודם הוא נכנס מהסיבה הלא נכונה</strong> — כדי למלא נדבך שהיה ריק. הפעם הנדבך מתמלא בזכות עצמו.
+              סקופ של מקור יחיד; הכותרת המקורית ״seeks to raise״ — הגיוס אינו עסקה סגורה.
+            </p>
+            <p class="srclinks">
+              לכתבה:
+              <a href="https://en.globes.co.il/en/article-israeli-ai-agents-co-wonderful-seeks-to-raise-500m-1001552121" target="_blank" rel="noopener">Globes English — ״Israeli AI agents co Wonderful seeks to raise $500m״, 12.8.2026</a>
+            </p>
+          </div>
+        </details>
+        <div class="actions" data-actions></div>
+      </article>
+
+      <!-- 3 · רשות שוק ההון — AI התקפי -->
+      <article class="card" id="cma-ai-cyber"
+        data-story data-ms="8000"
+        data-pillar="הגברת אפקטיביות" data-actor="רשות שוק ההון"
+        data-source="רשות שוק ההון — הודעה לעיתונות" data-date="פורסם 13.8.2026" data-verified="1"
+        data-url="https://www.gov.il/he/pages/press_01056"
+        data-signal="מה נוחת: דיון מתועד בוועדת ההיגוי לניהול סיכוני סייבר · מתי: עד 10.9.2026 · על מי: כל גוף מוסדי מפוקח, מגדל בכללם"
+        data-story-facts="הרשות דורשת מכל הגופים המוסדיים לבחון היערכות לאיומי סייבר מבוססי AI התקפי.|הדיון חייב להתקיים בוועדת ההיגוי לניהול סיכוני סייבר — עד 10 בספטמבר 2026.|הרשות מסווגת את ה-AI ההתקפי כשינוי מהותי בסביבת סיכוני הסייבר, על כל החובות שנגזרות מכך.">
+        <div class="meta-row">
+          <span class="tag">הגברת אפקטיביות</span>
+          <span class="tag tag-actor">רשות שוק ההון</span>
+          <span class="saved-pill">נשמר</span>
+          <span class="date">פורסם 13.8.2026</span>
+        </div>
+        <h3>רשות שוק ההון דורשת דיון בוועדת היגוי על איומי סייבר מבוססי <span class="n">AI</span> התקפי — עד <span class="n">10.9</span></h3>
+        <p class="facts">
+          הרשות פנתה לגופים המוסדיים ולנותני שירותים פיננסיים בדרישה לבחון את היערכותם לאיומים הנגזרים מפיתוחי בינה מלאכותית התקפית.
+          נדרשות הערכת מצב, ניתוח ההשפעה על מערכי ההגנה הקיימים, ודיון בוועדת ההיגוי לניהול סיכוני סייבר.
+          ככל שיעלה צורך בעדכון מערכי ההגנה או נהלי העבודה — תידרש תוכנית סדורה ליישום.
+        </p>
+        <p class="signal"><span class="lbl">מה נוחת</span>דיון מתועד בוועדת ההיגוי לניהול סיכוני סייבר · <strong>עד 10.9.2026</strong> · על כל גוף מוסדי מפוקח, מגדל בכללם</p>
+        <div class="context">
+          <span class="lbl">הקשר עובדתי</span>
+          <p>הפנייה אינה חוזר חדש אלא הפעלה של מנגנון קיים: ההודעה מעגנת אותה ב״הוראות החוזר החלות עליהם בעת שינויים מהותיים בסביבת סיכוני הסייבר״ — כלומר הרשות מסווגת <span class="n">AI</span> התקפי כשינוי מהותי בסביבת הסיכון.</p>
+        </div>
+        <details>
+          <summary>
+            <span>מקור: רשות שוק ההון, ביטוח וחיסכון — הודעה לעיתונות</span>
+            <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
+              <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
+            </span>
+          </summary>
+          <div class="more">
+            <ul>
+              <li>ההודעה מפנה את תשומת הלב להתפתחות מודלי בינה מלאכותית בעלי <strong>יכולות אוטונומיות</strong> בתחום הסייבר, ונוקבת מפורשות בדגם כדוגמת <span class="n">Claude Mythos</span>.</li>
+              <li>לפי ההודעה, ההתפתחות זכתה לאחרונה להתייחסות גם מצד גורמים בינלאומיים ובהם קרן המטבע העולמית.</li>
+              <li>הדרישה חלה על גופים מוסדיים <strong>ועל נותני שירותים פיננסיים (נש״פים)</strong> כאחד.</li>
+            </ul>
+            <p class="note">זהו הפריט הראשון בגיליון שנקרא <strong>ישירות מהמקור הראשוני</strong> — הודעה לעיתונות של הרשות ב-<span class="n">gov.il</span> — ולא מכיסוי עיתונאי עליו. בגיליון הקודם הפריט אותר בפיד RSS בלי כתובת של המפרסם, ולכן לא נכנס.</p>
+            <p class="srclinks">
+              למקור:
+              <a href="https://www.gov.il/he/pages/press_01056" target="_blank" rel="noopener">רשות שוק ההון, ביטוח וחיסכון — הודעה לעיתונות, 13.8.2026</a>
             </p>
           </div>
         </details>
@@ -808,12 +744,13 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
 
       <!-- 4 · טיוטת חוזר — הנחות בביטוח חיים -->
       <article class="card" id="life-insurance-discount-circular"
-        data-story data-ms="8000"
+        data-story data-ms="7000"
         data-pillar="הלקוח במרכז" data-actor="רשות שוק ההון"
         data-source="גלובס" data-date="פורסם 17.8.2026" data-verified="1"
         data-url="https://www.globes.co.il/news/article.aspx?did=1001552447"
-        data-caveat-short="מקור יחיד. מספר החוזר ומועד סיום הערות הציבור לא אומתו — אתר הרשות חסם קריאה אוטומטית."
-        data-story-facts="טיוטת חוזר: הנחה בביטוח חיים תחויב להישאר בתוקף לכל אורך הפוליסה.|הפרקטיקה שעל הכוונת: הנחות של 20%–30% שפוקעות ומקפיצות את הפרמיה.|הטיוטה בהערות ציבור; כניסה לתוקף מתוכננת לתחילת דצמבר 2026.">
+        data-signal="מה נוחת: חובה להותיר הנחה בביטוח חיים בתוקף לכל אורך הפוליסה · מתי: תחילת דצמבר 2026 · על מי: חברות הביטוח שמשווקות ביטוחי חיים"
+        data-caveat-short="מקור יחיד. מספר החוזר ומועד סיום הערות הציבור לא אומתו מול אתר הרשות."
+        data-story-facts="טיוטת חוזר: הנחה בביטוח חיים תחויב להישאר בתוקף לכל אורך הפוליסה.|הפרקטיקה שעל הכוונת: הנחות של 20%–30% שפוקעות ומקפיצות את הפרמיה.|כניסה לתוקף מתוכננת לתחילת דצמבר 2026.">
         <div class="meta-row">
           <span class="tag">הלקוח במרכז</span>
           <span class="tag tag-actor">רשות שוק ההון</span>
@@ -823,8 +760,9 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
         <h3>טיוטת חוזר: הנחה בביטוח חיים תחויב להישאר בתוקף לכל אורך הפוליסה</h3>
         <p class="facts">
           לפי הטיוטה, הנחה שניתנה בביטוח חיים תעמוד בתוקפה לכל אורך הפוליסה ולא רק לשנים הראשונות.
-          על הכוונת: הנחות התחלתיות של <span class="n">20%–30%</span> שפוקעות ומקפיצות את הפרמיה. כניסה לתוקף מתוכננת לתחילת דצמבר 2026.
+          על הכוונת: הנחות התחלתיות של <span class="n">20%–30%</span> שפוקעות ומקפיצות את הפרמיה.
         </p>
+        <p class="signal"><span class="lbl">מה נוחת</span>חובה להותיר את ההנחה בתוקף לכל אורך הפוליסה · <strong>תחילת דצמבר 2026</strong> · על חברות הביטוח שמשווקות ביטוחי חיים</p>
         <div class="context">
           <span class="lbl">הקשר עובדתי</span>
           <p>לפי הפרסום, כללים דומים עשויים לחול בהמשך גם על ביטוחי בריאות וביטוחי מחלות קשות.</p>
@@ -837,57 +775,114 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
             </span>
           </summary>
           <div class="more">
-            <p>הכלל חל גם על הנחה שניתנת אחרי תחילת הביטוח.</p>
-            <p class="subhead" style="margin-top:10px">הדוגמה שמופיעה בכתבה</p>
+            <p class="subhead">הדוגמה שמופיעה בכתבה</p>
             <ul>
               <li>מבוטח בן 35 עם הנחה של <span class="n">25%</span> משלם <span class="n">45</span> ₪ בחודש במקום 60 ₪.</li>
               <li>אחרי שלוש שנים ההנחה מצטמצמת ל-<span class="n">15%</span> והתשלום עולה ל-<span class="n">51</span> ₪.</li>
               <li>בשנה השישית ההנחה מסתיימת והתשלום מגיע ל-<span class="n">60</span> ₪ — עלייה של <span class="n">33%</span>.</li>
               <li>הכתבה מציינת חסם מעבר: מצב בריאותי שמקשה על מעבר לחברה אחרת לאחר שנים.</li>
             </ul>
-            <p class="note" data-caveat>הפריט נשען על מקור יחיד. מספר טיוטת החוזר ומועד סיום הערות הציבור לא אומתו מול אתר רשות שוק ההון, שחסם קריאה אוטומטית בכל הנתיבים שנוסו. הכתבה אינה קובעת במפורש שהחוזר יחול על כלל חברות הביטוח.</p>
+            <p class="note" data-caveat>הפריט נשען על מקור יחיד. מספר טיוטת החוזר ומועד סיום הערות הציבור לא אומתו מול אתר רשות שוק ההון. הכתבה אינה קובעת במפורש שהחוזר יחול על כלל חברות הביטוח.</p>
             <p class="srclinks">
               לכתבה:
-              <a href="https://www.globes.co.il/news/article.aspx?did=1001552447" target="_blank" rel="noopener">גלובס — ״טיוטת חוזר: הנחה בביטוח חיים תישאר בתוקף לכל אורך הפוליסה״, 17.8.2026</a> ·
-              <a href="https://en.globes.co.il/en/article-1001552515" target="_blank" rel="noopener">Globes English — הכתבה המקבילה</a>
+              <a href="https://www.globes.co.il/news/article.aspx?did=1001552447" target="_blank" rel="noopener">גלובס — ״טיוטת חוזר: הנחה בביטוח חיים תישאר בתוקף לכל אורך הפוליסה״, 17.8.2026</a>
             </p>
           </div>
         </details>
         <div class="actions" data-actions></div>
       </article>
 
-      <!-- 5 · קרנות השתלמות יולי -->
+      <!-- 5 · מיטב -->
+      <article class="card" id="meitav-q2-2026"
+        data-story data-ms="8000"
+        data-pillar="חיזוק פעילות ליבה" data-actor="מיטב"
+        data-source="גלובס · אייס · ביזפורטל" data-date="פורסם 17.8.2026" data-verified="1"
+        data-url="https://www.globes.co.il/news/article.aspx?did=1001552529"
+        data-caveat-short="נתון ה-55% הוא הצהרת חברה שאינה מבוקרת, והמונח ״סוכני AI״ אינו מוגדר במקור."
+        data-story-facts="נתח השוק של מיטב בגמל ובהשתלמות עלה ל-14.3%, לעומת כ-13% בסוף 2025.|הכנסות הגמל והפנסיה זינקו 42% ברבעון — גם בזכות עליית שיעור דמי הניהול הממוצע.|מנכ״ל מיטב: 55% מהתקשורת הכתובה עם לקוחות הגמל והפנסיה מבוצעת בסוכני AI.">
+        <div class="meta-row">
+          <span class="tag">חיזוק פעילות ליבה</span>
+          <span class="tag tag-actor">מיטב</span>
+          <span class="saved-pill">נשמר</span>
+          <span class="date">פורסם 17.8.2026</span>
+        </div>
+        <h3>מיטב העלתה את דמי הניהול הממוצעים ואת נתח השוק יחד — ל-<span class="n">14.3%</span> בגמל ובהשתלמות</h3>
+        <p class="facts">
+          הכנסות הגמל והפנסיה ברבעון הסתכמו ב-<span class="n">268</span> מיליון ₪, זינוק של <span class="n">42%</span>. גלובס תולה זאת במפורש
+          גם בגידול בנכסים <strong>וגם בעלייה בשיעור דמי הניהול הממוצע</strong>. במקביל עלה נתח השוק בגמל ובהשתלמות ל-<span class="n">14.3%</span>,
+          לעומת כ-<span class="n">13%</span> בסוף 2025 — כלומר ההעלאה לא באה על חשבון נתח שוק.
+        </p>
+        <div class="context">
+          <span class="lbl">הקשר עובדתי</span>
+          <p>באותו דיווח מסר מנכ״ל מיטב אילן רביב כי <strong><span class="n">55%</span> מהתקשורת הכתובה עם לקוחות מיטב גמל ופנסיה מבוצעת באמצעות סוכני <span class="n">AI</span></strong>, מתוך כ-242 מיליארד ₪ נכסי גמל ופנסיה.</p>
+        </div>
+        <details>
+          <summary>
+            <span>מקור: גלובס · אייס · ביזפורטל</span>
+            <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
+              <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
+            </span>
+          </summary>
+          <div class="more">
+            <ul>
+              <li>נכסים מנוהלים: <span class="n">464.5</span> מיליארד ₪, גידול של <span class="n">13.6%</span> מסוף 2025. גיוסים נטו ברבעון: מעל <span class="n">14</span> מיליארד ₪.</li>
+              <li>רווח מיוחס לבעלי המניות: <span class="n">142</span> מיליון ₪ (+31%). סך הכנסות: <span class="n">614</span> מיליון ₪ (+28%).</li>
+              <li>הרווח המגזרי בחיסכון ארוך הטווח: כ-<span class="n">95</span> מיליון ₪, עלייה של כ-<span class="n">67%</span>.</li>
+              <li>הכנסות מניהול קרנות: <span class="n">128</span> מיליון ₪ (+29%), גם כן בשל עלייה בשיעור דמי הניהול הממוצע בקרנות המסורתיות.</li>
+              <li>שיעור <span class="n">EBITDA</span> מנוטרלת: <span class="n">43.2%</span> לעומת 41.8% ברבעון המקביל.</li>
+            </ul>
+            <blockquote class="quote">
+              ״55% מהתקשורת הכתובה עם לקוחות מיטב גמל ופנסיה מבוצעת באמצעות סוכני AI, המידע הינו מדויק וזמינות השירות הינה לאורך כל שעות היממה״
+              <cite>אילן רביב, מנכ״ל מיטב</cite>
+            </blockquote>
+            <p class="note" data-caveat>
+              נתון ה-<span class="n">55%</span> הוא <strong>הצהרת חברה שאינה מבוקרת</strong>, והמונח ״סוכני AI״ אינו מוגדר במקור.
+              בנוסף — כותרת ב-TheMarker מאותו יום מדווחת על התייקרות של 40% בדמי הניהול במיטב בארבע שנים, אך גוף הכתבה חסום במנוי
+              ולא ניתן היה לאמת לאילו מוצרים המספר מתייחס. <strong>אין להשתמש בנתון ה-40%.</strong>
+            </p>
+            <p class="srclinks">
+              לכתבות:
+              <a href="https://www.globes.co.il/news/article.aspx?did=1001552529" target="_blank" rel="noopener">גלובס — דוחות מיטב, 17.8.2026</a> ·
+              <a href="https://www.ice.co.il/finance/news/article/1125879" target="_blank" rel="noopener">אייס — ״מיטב שוברת שיאים״, 17.8.2026</a> ·
+              <a href="https://www.bizportal.co.il/capitalmarket/news/article/20039076" target="_blank" rel="noopener">ביזפורטל — מיטב: הרווח עלה ב-31%, 17.8.2026</a>
+            </p>
+          </div>
+        </details>
+        <div class="actions" data-actions></div>
+      </article>
+
+      <!-- 6 · קרנות השתלמות יולי -->
       <article class="card" id="hishtalmut-july-2026"
         data-story data-ms="7000"
         data-pillar="חיזוק פעילות ליבה" data-actor="ענף"
-        data-source="פאנדר" data-date="פורסם 17.8.2026" data-verified="1"
+        data-source="פאנדר · גלובס" data-date="פורסם 17.8.2026" data-verified="1"
         data-url="https://www.funder.co.il/article/207662"
-        data-caveat-short="סתירה פנימית במקור בין גוף הכתבה לטבלה. הנתונים כאן לקוחים מהטבלה; לא נבדק מקור שני."
-        data-story-facts="מגדל −0.50% במסלול הכללי, מול ממוצע ענפי של −0.44%.|מגדל −1.10% במסלול המניות, מול ממוצע ענפי של −0.96%.|מקום 8 מתוך 10 בכללי ומקום 8 מתוך 11 במניות.">
+        data-caveat-short="סתירה פנימית במקור בין גוף הכתבה לטבלה. הנתונים כאן לקוחים מהטבלה."
+        data-story-facts="מגדל −0.50% במסלול הכללי, מול ממוצע ענפי של −0.44%.|מגדל −1.10% במסלול המניות, מול ממוצע ענפי של −0.96%.|בפנסיה לבני 50 ומטה מגדל דווקא בצד המנצח — אחת משלוש הקרנות היחידות שסיימו בחיוב.">
         <div class="meta-row">
           <span class="tag">חיזוק פעילות ליבה</span>
           <span class="tag tag-actor">ענף</span>
           <span class="saved-pill">נשמר</span>
           <span class="date">פורסם 17.8.2026</span>
         </div>
-        <h3>קרנות ההשתלמות ביולי: מגדל מתחת לממוצע הענפי בשני המסלולים המרכזיים</h3>
+        <h3>קרנות ההשתלמות ביולי: מגדל מתחת לממוצע הענפי — ובפנסיה דווקא בצד המנצח</h3>
         <p class="facts">
-          במסלול הכללי רשמה מגדל <span class="n">−0.50%</span> מול ממוצע ענפי של <span class="n">−0.44%</span>, ודורגה שמינית מתוך עשר.
-          במסלול המניות רשמה <span class="n">−1.10%</span> מול ממוצע של <span class="n">−0.96%</span>, ודורגה שמינית מתוך אחת עשרה.
+          במסלול הכללי רשמה מגדל <span class="n">−0.50%</span> מול ממוצע ענפי של <span class="n">−0.44%</span>, ובמסלול המניות <span class="n">−1.10%</span> מול <span class="n">−0.96%</span> — מקום שמיני בשניהם.
+          בקרנות הפנסיה לבני 50 ומטה התמונה הפוכה: רק שלוש קרנות סיימו את יולי בחיוב, ומגדל אחת מהן.
         </p>
         <div class="context">
           <span class="lbl">הקשר עובדתי</span>
-          <p>את המסלול הכללי הובילה ילין לפידות עם <span class="n">−0.01%</span>; את מסלול המניות הובילה אלטשולר שחם עם <span class="n">−0.28%</span> — חודש שני ברציפות.</p>
+          <p>בפנסיה לבני 50 ומטה: מור <span class="n">0.65%</span>, הפניקס <span class="n">0.2%</span> ומגדל <span class="n">0.1%</span> — מול ממוצע ענפי של <span class="n">−0.2%</span>. הראל בתחתית בשני מסלולי הגמל.</p>
         </div>
         <details>
           <summary>
-            <span>מקור: פאנדר</span>
+            <span>מקור: פאנדר · גלובס</span>
             <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
               <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
             </span>
           </summary>
           <div class="more">
-            <p class="subhead">תשואות יולי 2026</p>
+            <p class="subhead">תשואות יולי 2026 — קרנות השתלמות</p>
             <table class="data">
               <thead><tr><th>חברה</th><th>מסלול כללי</th><th>מסלול מניות</th></tr></thead>
               <tbody>
@@ -900,174 +895,79 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
                 <tr><td>הראל</td><td><span class="n">−1.24%</span></td><td><span class="n">−2.10%</span></td></tr>
               </tbody>
             </table>
-            <p class="note" data-caveat>סתירה פנימית במקור: גוף הכתבה מייחס את <span class="n">−2.10%</span> במסלול המניות לאינפיניטי, בעוד הטבלה מציגה אינפיניטי <span class="n">−1.05%</span> והראל <span class="n">−2.10%</span>. הנתונים כאן לקוחים מהטבלה. לא נבדק מקור שני.</p>
-            <p class="srclinks">
-              לכתבה:
-              <a href="https://www.funder.co.il/article/207662" target="_blank" rel="noopener">פאנדר — ״קרנות ההשתלמות ביולי 26: ילין לפידות מובילה בכללי, אלטשולר שחם במניות״, 17.8.2026</a>
-            </p>
-          </div>
-        </details>
-        <div class="actions" data-actions></div>
-      </article>
-
-      <!-- 6 · Wonderful -->
-      <article class="card" id="wonderful-ai-round"
-        data-story data-ms="7000"
-        data-pillar="הגברת אפקטיביות" data-actor="Wonderful"
-        data-source="גלובס" data-date="פורסם 12.8.2026" data-verified="1"
-        data-url="https://en.globes.co.il/en/article-israeli-ai-agents-co-wonderful-seeks-to-raise-500m-1001552121"
-        data-caveat-short="פורסם 12.8, יום לפני החלון. סקופ של מקור יחיד; הגיוס מבוקש ואינו עסקה סגורה."
-        data-story-facts="גיוס מבוקש של 500 מיליון דולר לפי שווי 5 מיליארד — כפול מהסבב הקודם.|קצב הכנסות שנתי 55 מיליון דולר, לעומת כמיליון דולר באוגוסט 2025.|מנורה מבטחים וליברה מפעילות את סוכני ה-AI שלה במערך שירות הלקוחות.">
-        <div class="meta-row">
-          <span class="tag">הגברת אפקטיביות</span>
-          <span class="tag tag-actor">Wonderful</span>
-          <span class="saved-pill">נשמר</span>
-          <span class="date">פורסם 12.8.2026</span>
-        </div>
-        <h3>מנורה מבטחים וליברה מפעילות סוכני <span class="n">AI</span> של <span class="n">Wonderful</span>, שיוצאת לגיוס לפי שווי <span class="n">5</span> מיליארד דולר</h3>
-        <p class="facts">
-          חברת סוכני ה-<span class="n">AI</span> הישראלית יצאה לגייס <span class="n">500</span> מיליון דולר לפי שווי מבוקש של <span class="n">5</span> מיליארד — כפול מהסבב הקודם.
-          קצב ההכנסות השנתי: <span class="n">55</span> מיליון דולר, לעומת כמיליון דולר באוגוסט 2025.
-        </p>
-        <div class="context">
-          <span class="lbl">הקשר עובדתי</span>
-          <p>בישראל החברה עובדת מול מערכי שירות הלקוחות של בנק הפועלים, בנק דיסקונט, מכבי שירותי בריאות, בזק, פזגז, <strong>מנורה מבטחים וליברה</strong>.</p>
-        </div>
-        <details>
-          <summary>
-            <span>מקור: גלובס</span>
-            <span class="toggle"><span class="lbl-open">להרחבה</span><span class="lbl-close">לסגירה</span>
-              <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>
-            </span>
-          </summary>
-          <div class="more">
             <ul>
-              <li>הסבב הקודם, 165 מיליון דולר, נסגר שלושה חודשים קודם לכן; קצב ההכנסות ברבעון הראשון של 2026 היה 18 מיליון דולר.</li>
-              <li>סך הגיוסים עד היום: <span class="n">290</span> מיליון דולר. מצבת העובדים: כ-<span class="n">630</span>, לעומת 90 לפני שנה.</li>
-              <li>החברה פעילה ב-30 מדינות ונוסדה על ידי בר וינקלר (מנכ״ל) ורועי ללזר. מתחרותיה: <span class="n">Salesforce</span> ו-<span class="n">Sierra AI</span>.</li>
-              <li><strong>בחלון 13–19.8 לא נמצאה שום הכרזת <span class="n">AI</span> תפעולי ישירה</strong> של הפניקס, הראל, כלל, מנורה מבטחים, איילון, ביטוח ישיר, ווישור או ליברה. מנורה וליברה מופיעות כאן כלקוחות בלבד.</li>
+              <li>מתחילת 2026 מובילה כלל בשני המסלולים — <span class="n">6.8%</span> בכללי ו-<span class="n">11.3%</span> במנייתי; הראל שלישית.</li>
+              <li>רקע לחודש החלש: מדד נאסד״ק ירד ב-<span class="n">4.2%</span> ביולי 2026.</li>
             </ul>
-            <p class="note" data-caveat>הפריט פורסם ב-12.8.2026 — יום אחד לפני חלון הסריקה. הוא נכנס משום שזה הפריט היחיד שניתן לתייג לנדבך ״הגברת האפקטיביות והקטנת עלויות״. סקופ של מקור יחיד; הכותרת המקורית היא ״seeks to raise״ — הגיוס אינו עסקה סגורה. הובלת הסבב על ידי Insight Partners מדווחת כהערכה.</p>
+            <p class="note" data-caveat>סתירה פנימית במקור: גוף הכתבה בפאנדר מייחס את <span class="n">−2.10%</span> במסלול המניות לאינפיניטי, בעוד הטבלה מציגה אינפיניטי <span class="n">−1.05%</span> והראל <span class="n">−2.10%</span>. הנתונים כאן לקוחים מהטבלה.</p>
             <p class="srclinks">
-              לכתבה:
-              <a href="https://en.globes.co.il/en/article-israeli-ai-agents-co-wonderful-seeks-to-raise-500m-1001552121" target="_blank" rel="noopener">Globes English — ״Israeli AI agents co Wonderful seeks to raise $500m״, 12.8.2026</a>
+              לכתבות:
+              <a href="https://www.funder.co.il/article/207662" target="_blank" rel="noopener">פאנדר — ליגת FUNDER לקרנות השתלמות, יולי 2026, 17.8.2026</a> ·
+              <a href="https://www.globes.co.il/news/article.aspx?did=1001552481" target="_blank" rel="noopener">גלובס — ״שני בתי השקעות הפתיעו בחודש חלש בגמל״, 17.8.2026</a>
             </p>
           </div>
         </details>
         <div class="actions" data-actions></div>
       </article>
-
-      <!-- ============ פריטים רזים ============ -->
-      <h2 class="section-title">נרשם השבוע, בלי פירוט</h2>
-      <section class="thin">
-        <p class="sub">נסרקו כפריטים, אבל בסריקה נשמרו רק כותרת ומקור. לא הושלמו נתונים שלא פורסמו.</p>
-        <ol>
-          <li id="namanut-agency-fine">
-            <span class="t">כ-10.5 מיליון ₪ עיצום וקנס על ״נאמנות סוכנות לביטוח״ ועל מנכ״לה — עידוד למשיכה מוקדמת של כספי פנסיה וייעוץ ללא רישיון</span>
-            <span class="m">
-              <span class="tag">חיזוק פעילות ליבה</span>
-              <span>17.8</span>
-              <span>·</span>
-              <a href="https://www.funder.co.il/article/207700" target="_blank" rel="noopener" aria-label="פאנדר — עיצום על נאמנות סוכנות לביטוח">פאנדר</a>
-              <span>·</span>
-              <span>תאריך אומת</span>
-            </span>
-          </li>
-          <li id="mor-investments-q2">
-            <span class="t">מור השקעות: ההכנסות ברבעון השני עלו ב-22% ל-305.4 מיליון ₪, הרווח הנקי ירד ב-2% ל-38 מיליון ₪</span>
-            <span class="m">
-              <span class="tag">חיזוק פעילות ליבה</span>
-              <span>נסרק 19.8</span>
-              <span>·</span>
-              <a href="https://www.bizportal.co.il/capitalmarket/news/article/20039485" target="_blank" rel="noopener" aria-label="ביזפורטל — דוחות מור השקעות לרבעון השני">ביזפורטל</a>
-              <span>·</span>
-              <span>תאריך לא אומת</span>
-            </span>
-          </li>
-          <li id="harel-class-action">
-            <span class="t">אושרה חלקית תביעה ייצוגית נגד הראל — דרישות השבה של מס שלא נוכה במקור ב-2010–2011</span>
-            <span class="m">
-              <span class="tag">הלקוח במרכז</span>
-              <span>נסרק 19.8</span>
-              <span>·</span>
-              <a href="https://www.funder.co.il/article/207856" target="_blank" rel="noopener" aria-label="פאנדר — תביעה ייצוגית נגד הראל">פאנדר</a>
-              <span>·</span>
-              <span>תאריך לא אומת</span>
-            </span>
-          </li>
-        </ol>
-      </section>
     </main>
 
     <aside class="col-side">
       <h2 class="section-title">על הרדאר</h2>
       <section class="radar">
-        <p class="sub">עדיין לא סיפור. שווה מעקב לשבוע הבא.</p>
+        <p class="sub">עבר את הסינון, אך לא נכנס לשבעת הפריטים. שווה מעקב.</p>
         <ol>
           <li>
-            <span class="t">הראל תפרסם את דוחות הרבעון השני ב-26 באוגוסט</span>
-            <span class="m">19.8 · ההשוואה הראשונה מול 22.4% של מגדל · <a href="https://pr.harel-group.co.il/he/" target="_blank" rel="noopener" aria-label="קשרי משקיעים הראל — לוח דיווחים">קשרי משקיעים הראל</a></span>
+            <span class="t">הפניקס חשפה מסע <span class="n">AI</span> ארגוני: כ-100 צ׳מפיונים, האקתון עם 90 יוזמות ו-18 סוכני <span class="n">AI</span> לעובדים</span>
+            <span class="m">13.8 · מתחרה ישירה בונה יכולת <span class="n">AI</span> רוחבית · <a href="https://polisa.news/100-%d7%a6%d7%9e%d7%a4%d7%99%d7%95%d7%a0%d7%99%d7%9d-90-%d7%99%d7%95%d7%96%d7%9e%d7%95%d7%aa-%d7%95%d7%97%d7%96%d7%95%d7%9f-%d7%90%d7%97%d7%93-%d7%9b%d7%9a-%d7%a0%d7%a8%d7%90%d7%94-%d7%9e%d7%a1/" target="_blank" rel="noopener" aria-label="עיתון פוליסה — מסע ה-AI של הפניקס">עיתון פוליסה</a></span>
           </li>
           <li>
-            <span class="t">כלל, מנורה והפניקס טרם פרסמו דוחות לרבעון השני</span>
-            <span class="m">19.8 · ברבעון הראשון: כלל 16.1% תשואה להון, מנורה 20.2%, הפניקס 24.1% · <a href="https://www.clalbit.co.il/financialreports/" target="_blank" rel="noopener" aria-label="כלל ביטוח — דוחות כספיים">כלל ביטוח</a></span>
+            <span class="t">דיסקונט מצמצם כ-<span class="n">600</span> עובדים — כ-8% מהמצבת — בחיסכון שנתי של כ-250 מיליון ₪</span>
+            <span class="m">13.8 · 213 כבר פרשו ו-264 חתמו על הסדרים; הבנק בוחן גם מיזוג מרכנתיל · <a href="https://www.bizportal.co.il/capitalmarket/news/article/20038745" target="_blank" rel="noopener" aria-label="ביזפורטל — צמצום כוח האדם בדיסקונט">ביזפורטל</a></span>
           </li>
           <li>
-            <span class="t">הכשרה משיקה קמפיין עם פרזנטור ראפר שנוצר כולו ב-<span class="n">AI</span></span>
-            <span class="m">16.8 · דמות שיווקית שנוצרה כולה ב-AI, לגיוס חוסכים בגילי 18–25 · <a href="https://www.globes.co.il/news/article.aspx?did=1001552476" target="_blank" rel="noopener" aria-label="גלובס — קמפיין ה-AI של הכשרה">גלובס</a></span>
+            <span class="t">כלל החזקות מאשרת <span class="n">לראשונה</span> רכישה עצמית — עד <span class="n">200</span> מיליון ₪</span>
+            <span class="m">19.8 · שינוי מדיניות החזרת הון בקבוצת ביטוח, לצד דיבידנד ביניים של 200 מיליון ₪ · <a href="https://www.sponser.co.il/Article.aspx?ArticleID=123006" target="_blank" rel="noopener" aria-label="ספונסר — רכישה עצמית בכלל החזקות">ספונסר</a></span>
           </li>
           <li>
-            <span class="t">שיא של 20 חודשים בנטילת משכנתאות: <span class="n">11.5</span> מיליארד ₪ ביולי</span>
-            <span class="m">12.8 · הפריים עלה ל-19% מהמשכנתאות לעומת 9% אשתקד — זירת האשראי · <a href="https://www.calcalist.co.il/real-estate/article/rya00yrf8gg" target="_blank" rel="noopener" aria-label="כלכליסט — שיא במשכנתאות ביולי">כלכליסט</a></span>
+            <span class="t">לאומי יאפשר מסחר בקריפטו באפליקציה — הראשון במערכת הבנקאית</span>
+            <span class="m">13.8 · ביטקוין, את׳ריום וסולנה עם Galaxy Digital; תחילת 2027, בכפוף לאישור בנק ישראל · <a href="https://www.funder.co.il/article/207461" target="_blank" rel="noopener" aria-label="פאנדר — מסחר בקריפטו בלאומי">פאנדר</a></span>
           </li>
           <li>
-            <span class="t">שוק קרנות הנאמנות חצה <span class="n">836.7</span> מיליארד ₪</span>
-            <span class="m">17.8 · 44.1 מיליארד ₪ גויסו מתחילת השנה · <a href="https://www.funder.co.il/article/207681" target="_blank" rel="noopener" aria-label="פאנדר — היקף שוק קרנות הנאמנות">פאנדר</a></span>
+            <span class="t">ארבעת הבנקים הגדולים הגישו ערר על ההכרזה כקבוצת ריכוז</span>
+            <span class="m">17.8 · ארבע הוראות בפיקדונות הקמעונאיים אמורות להיכנס לתוקף במאי 2027 · <a href="https://www.ice.co.il/law/news/article/1125852" target="_blank" rel="noopener" aria-label="אייס — ערר הבנקים על קבוצת ריכוז">אייס</a></span>
           </li>
           <li>
-            <span class="t">גלי החום באירופה: <span class="n">43</span> מיליארד אירו נזק מול כ-<span class="n">500</span> מיליון אירו תגמולים</span>
-            <span class="m">18.8 · פער הגנה של כ-98.8% · <a href="https://www.insurancejournal.com/news/international/2026/08/18/881900.htm" target="_blank" rel="noopener" aria-label="Insurance Journal — פער ההגנה בגלי החום באירופה">Insurance Journal</a></span>
+            <span class="t">מור גמל חתמה על מזכר הבנות לרכישת <span class="n">20%</span> מלוזון תשתיות אנרגיה — <span class="n">223</span> מיליון ₪</span>
+            <span class="m">19.8 · לא מחייב; 60 יום לבלעדיות. לוזון מנהלת מגעים מקבילים גם עם הראל וכלל · <a href="https://www.globes.co.il/news/article.aspx?did=1001552753" target="_blank" rel="noopener" aria-label="גלובס — מור גמל ולוזון תשתיות אנרגיה">גלובס</a></span>
+          </li>
+          <li>
+            <span class="t">ישראכרט הנפיקה רבע מיליון כרטיסי פליי קארד בארבעה חודשים; תיק האשראי חצה <span class="n">13</span> מיליארד ₪</span>
+            <span class="m">13.8 · המועדון עבר מכאל לישראכרט במרץ · <a href="https://www.globes.co.il/news/article.aspx?did=1001552212" target="_blank" rel="noopener" aria-label="גלובס — פליי קארד בישראכרט">גלובס</a></span>
+          </li>
+          <li>
+            <span class="t">הראל תפרסם את דוחות הרבעון השני ב-<span class="n">26 באוגוסט</span></span>
+            <span class="m">אירוע ידוע מראש · ההשוואה הבאה מול 22.5% של כלל ו-22.4% של מגדל · <a href="https://pr.harel-group.co.il/he/" target="_blank" rel="noopener" aria-label="קשרי משקיעים הראל — לוח דיווחים">קשרי משקיעים הראל</a></span>
           </li>
         </ol>
       </section>
 
-      <section class="openloops">
-        <h3>פתוח לשבוע הבא</h3>
-        <p class="sub">עובדות תלויות ועומדות, לא הערכות.</p>
-        <ul>
-          <li>הראל תפרסם דוחות ב-26.8. הפניקס, כלל ומנורה טרם פרסמו.</li>
-          <li>תיעוד ההצבעות של המוסדיים — עד <strong>2 בספטמבר</strong>.</li>
-          <li>אסיפת אוריון ב-24.8, ובה התבקש מינוי ארבעה דירקטורים מטעם מור ו״הביתה ליווינג״.</li>
-          <li>טיוטת החוזר על הנחות בביטוח חיים בהערות ציבור; תוקף מתוכנן לדצמבר 2026.</li>
-          <li>הראל מסרה שהיא בוחנת בקשת רשות ערעור על אישור התביעה הייצוגית.</li>
-          <li>החלטת הריבית של בנק ישראל — סוף אוגוסט, אחרי חלון הסריקה.</li>
-        </ul>
-        <p class="subhead" style="margin-top:14px">מה זז מהגיליון הקודם</p>
-        <ul>
-          <li><strong>תשואות יולי</strong> — הקודם כיסה פנסיה; השבוע ההשתלמות, ובהן מגדל מתחת לממוצע.</li>
-          <li><strong>מור</strong> — הקודם כיסה את העלאת התחזית; השבוע הדוחות, ובמקביל הבלימה באוריון.</li>
-          <li><strong>איילון–כללית</strong> — <span class="n">עדיין פתוח</span>. אין דיווח על אישור הרשות להתקשרות.</li>
-          <li><strong>הון רובד 1 של מגדל</strong> — <span class="n">עדיין פתוח</span>. ההנפקה טרם בוצעה; כושר הפירעון ברבעון 119% ללא פריסה.</li>
-        </ul>
-      </section>
-
       <section class="scoreboard">
         <h3>הלוח של 2028</h3>
-        <p class="sub">היעדים שמגדל הכריזה עליהם בפומבי, מול המספרים שפורסמו השבוע.</p>
+        <p class="sub">היעדים שמגדל הכריזה עליהם בפומבי, מול המספרים שכלל ומגדל פרסמו השבוע.</p>
         <table>
-          <thead><tr><th>מדד</th><th style="text-align:center">2025</th><th style="text-align:center">הדוח האחרון</th><th style="text-align:end">יעד 2028</th></tr></thead>
+          <thead><tr><th>מדד</th><th style="text-align:center">מגדל</th><th style="text-align:center">כלל</th><th style="text-align:end">יעד מגדל 2028</th></tr></thead>
           <tbody>
-            <tr><td>נכסים מנוהלים</td><td class="now">583 מיליארד ₪</td><td class="new">631 מיליארד <small>סוף יוני 2026</small></td><td class="goal">750–850 מיליארד</td></tr>
-            <tr><td>רווח כולל</td><td class="now">1.79 מיליארד ₪</td><td class="new">897 מיליון <small>מחצית 2026</small></td><td class="goal">2–2.2 מיליארד</td></tr>
-            <tr><td>רווחי ליבה</td><td class="now">2.4 מיליארד ₪</td><td class="new">731 מיליון <small>רבעון 2 בלבד</small></td><td class="goal">3–3.2 מיליארד</td></tr>
-            <tr><td>תשואה להון</td><td class="now">10.5%</td><td class="new">22.4% <small>רבעון 2 בלבד</small></td><td class="goal">16%–18%</td></tr>
+            <tr><td>נכסים מנוהלים</td><td class="now">631 מיליארד ₪</td><td class="new">456 מיליארד <small>30.6.2026</small></td><td class="goal">750–850 מיליארד</td></tr>
+            <tr><td>תשואה להון</td><td class="now">22.4%</td><td class="new">22.5% <small>רבעון 2</small></td><td class="goal">16%–18%</td></tr>
+            <tr><td>רווח כולל</td><td class="now">575 מיליון ₪</td><td class="new">614 מיליון <small>רבעון 2</small></td><td class="goal">2–2.2 מיליארד <small>שנתי</small></td></tr>
           </tbody>
         </table>
         <p class="src">
-          היעדים ונתוני 2025:
+          שלוש השורות באותה תקופה ובאותה הגדרה לשתי החברות: רבעון שני 2026, ונכסים ליום 30.6.2026.
+          מגדל דיווחה 17.8, כלל דיווחה 19.8. <strong>שורת הרווח הכולל מעמידה רבעון מול יעד שנתי</strong> ואינה שיעור התקדמות.
+          היעדים:
           <a href="https://www.calcalist.co.il/market/article/s1gv8vbswg" target="_blank" rel="noopener" aria-label="כלכליסט — יעדי 2028 של מגדל">כלכליסט</a> ·
-          <a href="https://www.ice.co.il/finance/news/article/1107398" target="_blank" rel="noopener" aria-label="אייס — יעדי 2028 של מגדל">אייס</a>, שניהם 25.3.2026.
-          הדוח האחרון: דיווחי 17.8.2026. <strong>העמודה מערבבת תקופות</strong> — רבעון ומחצית מול יעד שנתי, ולכן אינה שיעור התקדמות.
+          <a href="https://www.ice.co.il/finance/news/article/1107398" target="_blank" rel="noopener" aria-label="אייס — יעדי 2028 של מגדל">אייס</a>, 25.3.2026.
         </p>
       </section>
     </aside>
@@ -1090,27 +990,22 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
     <div class="colophon-grid">
       <dl>
         <div>
-          <dt>נסרק</dt>
-          <dd>גלובס · כלכליסט · <span class="n">TheMarker</span> · ביזפורטל · אייס · פאנדר ותת-הפורטלים שלו · ספונסר · מעריב · <span class="n">Insurance Journal</span> · <span class="n">Insurance Business</span> · עמודי קשרי המשקיעים של הראל, הפניקס וכלל. חלון: 13–19 באוגוסט 2026, שבעה ימים עד יום הסריקה.</dd>
+          <dt>החלון</dt>
+          <dd>13–19 באוגוסט 2026, <strong>סגירה ב-19.8 בשעה 23:59</strong>. אירוע שנוחת אחרי שעת הסגירה עובר לחלון הבא ואינו נעלם. פריט אחד בגיליון פורסם ב-12.8 והוא מסומן ככזה.</dd>
         </div>
         <div>
-          <dt>תאריכים ולינקים</dt>
-          <dd>שמונה מתוך עשרה פריטים אומתו מול הכתבה עצמה — תאריך פרסום ולינק ישיר. פריט שמסומן ״לא אומת״ נושא תאריך סריקה. כל פריט עבר אימות אדוורסרי נפרד שניסה להפריך אותו.</dd>
+          <dt>איך נסרק</dt>
+          <dd>לפי <strong>רשימת בדיקה של 25 גופים בשמותיהם</strong>, ולא לפי נושאים — חברות ביטוח, בנקים, חברות כרטיסי אשראי, בתי השקעות, זרועות קשורות ורגולטורים. לפני הסריקה נבנה לוח האירועים הידועים מראש של השבוע.</dd>
         </div>
         <div>
-          <dt>לא נקרא במלואו</dt>
-          <dd>גלובס, כלכליסט, <span class="n">TheMarker</span> והארץ — <span class="n">paywall</span>. מהם נלקחו כותרת, תאריך ומספרים שחוזרים במקורות פתוחים בלבד. לא צוטט מגוף כתבה חסומה.</dd>
+          <dt>מה נקרא</dt>
+          <dd>רשות שוק ההון ב-<span class="n">gov.il</span> — <strong>מקור ראשוני</strong> · עיתון פוליסה · פאנדר · ביזפורטל · אייס · ספונסר · גלובס · כלכליסט · ynet · הארץ · <span class="n">Bing News RSS</span> · עמודי קשרי המשקיעים של הראל, הפניקס, כלל ומנורה.</dd>
         </div>
         <div>
-          <dt>נחסם לקריאה אוטומטית</dt>
-          <dd>אתר רשות שוק ההון ב-<span class="n">gov.il</span> · עיתון פוליסה · עדיף · לשכת סוכני הביטוח · בנק ישראל — כולם החזירו <span class="n">403</span>. מאיה נטענת ב-<span class="n">JavaScript</span> ולא נקראה. לינקדאין החזיר מסך התחברות בכל נתיב. <strong>המשמעות: הגיליון הזה נשען כולו על כיסוי עיתונאי ולא על מקור ראשוני.</strong></dd>
+          <dt>מה נשאר חסום</dt>
+          <dd>עדיף (<span class="n">Cloudflare</span>) · מאיה ומגנ״א (ממשק חיפוש שנטען ב-<span class="n">JavaScript</span>) · <span class="n">TheMarker</span> (כותרת ותאריך בלבד) · לינקדאין. פידי <span class="n">RSS</span> מכסים יום-יומיים אחורה בלבד, ולכן חלון של שבוע נסרק דרך חיפוש ממוין לפי תאריך.</dd>
         </div>
       </dl>
-      <div class="notfound">
-        <span class="lbl">לא נמצאו השבוע</span>
-        <p>דוחות רבעון שני של הראל, הפניקס, כלל ומנורה · נתוני ניוד כספים בפנסיה · רכישות סוכנויות ותיקי ביטוח · מינויים ועזיבות בהנהלות חברות הביטוח ובתי ההשקעות · מכרזי ביטוח קבוצתיים חדשים.</p>
-        <p>נדבך ״הגברת האפקטיביות והקטנת עלויות״ ייצר פריט אחד בלבד, וגם הוא של ספק חיצוני. לא אותר מהלך <span class="n">AI</span> תפעולי של אף חברת ביטוח ישראלית. לא נוספו פריטים כדי למלא מכסה.</p>
-      </div>
     </div>
 
     <p class="feedback">
@@ -1123,8 +1018,8 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
     </p>
 
     <p class="signature">
-      מוקאפ להדגמה. כל פריט מתויג לאחד משלושת נדבכי האסטרטגיה של מגדל — עובדות והקשר עובדתי בלבד, בלי המלצות.
-      המבט הבא: שבוע 20–26 באוגוסט 2026, ובו דוחות הראל.
+      מוקאפ להדגמה. פריט נכנס רק אם הוא נתלה באחד משלושת נדבכי האסטרטגיה, <strong>ועובר טריגר</strong> — תזוזה במספר, מהלך שגוף עשה, או איתות שתאריך הנחיתה שלו ידוע.
+      עובדות והקשר עובדתי בלבד, בלי המלצות. המבט הבא: 20–26 באוגוסט 2026, ובו דוחות הראל.
     </p>
   </footer>
 
@@ -1186,7 +1081,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
     ? location.origin + location.pathname.replace(/index\.html$/, "")
     : CANON;
   var ISSUE = "13–19 באוגוסט 2026";
-  var STORE = "mbt:2026-08-19";           /* מפתח לשבוע הזה בלבד */
+  var STORE = "mbt:2026-08-19-v2";        /* מפתח לגיליון הזה בלבד */
   var reduceMotion = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
 
   /* ---------- אחסון מקומי, עם נפילה לזיכרון ---------- */
@@ -1227,6 +1122,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
       date: el.dataset.date,
       verified: el.dataset.verified === "1",
       caveat: caveat ? caveat.textContent.replace(/\s+/g, " ").trim() : "",
+      signal: el.dataset.signal || "",
       /* בנגן יש מקום לשורה, בדף ובהעתקה — לניסוח המלא */
       caveatShort: el.dataset.caveatShort || (caveat ? caveat.textContent.replace(/\s+/g, " ").trim() : ""),
       url: el.dataset.url,
@@ -1278,6 +1174,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
     L.push("נדבך: " + it.tag);
     L.push("מקור: " + it.source + " · " + it.date);
     if (!it.verified) L.push("(תאריך הפרסום לא אומת; הקישור מוביל לחיפוש באתר המקור)");
+    if (it.signal) L.push("איתות — " + it.signal); /* מה נוחת · מתי · על מי */
     if (it.caveat) L.push("סייג: " + it.caveat);   /* הסייג נוסע עם העובדה */
     L.push(it.url);
     L.push("לפריט במבט: " + SITE + "#" + it.slug);
@@ -1446,20 +1343,6 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
     });
   });
 
-  /* ---------- ״נסרק ולא נמצא״ ---------- */
-  document.getElementById("copyNofind").addEventListener("click", function(){
-    /* הטקסט נגזר מהעמוד, כדי שגיליון חדש לא יחייב עריכת קוד */
-    function textOf(sel){
-      var n = document.querySelector(sel);
-      return n ? n.textContent.replace(/\s+/g, " ").trim() : "";
-    }
-    var body = textOf(".nofind p");
-    var scanned = textOf(".colophon dl div:first-child dd");
-    copy("מבט שבועי תחרותי · " + ISSUE + "\n" + body +
-         (scanned ? "\nמקורות שנסרקו: " + scanned : "") + "\n" + SITE,
-         "הועתק");
-  });
-
   /* ---------- משוב ---------- */
   document.querySelectorAll("[data-fb]").forEach(function(b){
     b.addEventListener("click", function(){
@@ -1496,7 +1379,7 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
        זו ההבטחה של המוצר, ולכן היא נמדדת ולא מוצהרת. */
     var scanWords = 0;
     Array.prototype.forEach.call(
-      shell.querySelectorAll(".tldr, .lead h2, .lead .chips, .card h3, .nofind p, .thin .t, .radar .t"),
+      shell.querySelectorAll(".tldr, .lead h2, .lead .chips, .card h3, .signal, .radar .t"),
       function(el){ scanWords += countWords(el.textContent); }
     );
     var scanSecs = Math.max(30, Math.round(scanWords / 200 * 60 / 5) * 5);
@@ -1601,9 +1484,9 @@ table.data td:first-child{font-weight:700; color:var(--mig-ink-2)}
       ul.appendChild(li);
     }
     elFacts.appendChild(ul);
-    var thin = document.querySelectorAll(".thin ol > li").length;
-    elMeta.textContent = (ITEMS.length + thin) + " פריטים בגיליון · " + thin +
-                         " נרשמו בלי פירוט · " + ISSUE;
+    var radar = document.querySelectorAll(".radar ol > li").length;
+    elMeta.textContent = ITEMS.length + " פריטים בגיליון · " + radar +
+                         " על הרדאר · " + ISSUE;
     Array.prototype.forEach.call(fills, function(b){ b.style.width = "100%"; });
 
     actions.textContent = "";
