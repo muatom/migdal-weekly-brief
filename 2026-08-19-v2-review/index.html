@@ -797,8 +797,12 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
   }
 }
 .player :focus-visible{box-shadow:0 0 0 3px var(--mg-mint)}
-/* פסי התקדמות: גובה 3, מרווח 5, dir=ltr כדי לשמור סדר זמן שמאל→ימין */
-.pl-bars{display:flex; gap:5px; padding:calc(14px + env(safe-area-inset-top)) 16px 0; flex:none; position:relative; z-index:3; direction:ltr}
+/* פסי התקדמות: גובה 3, מרווח 5.
+   ⚠️ **סטייה מוצהרת מהמפרט.** פרק 06 אומר ״רצף פרוגרס/פסים ב-dir=ltr כדי לשמור סדר
+   זמן שמאל→ימין״ — וזה שגוי כאן, כי הנגן עצמו מוגדר בפרק 15 כ״שמאל — הבא, ימין —
+   הקודם״. כלומר הפרקים מתקדמים **שמאלה**, ולכן פס ההתקדמות חייב להתמלא מימין לשמאל.
+   `dir=ltr` היה מריץ אותו בכיוון ההפוך מהניווט. הפסים יורשים RTL מהשורש. (D-050) */
+.pl-bars{display:flex; gap:5px; padding:calc(14px + env(safe-area-inset-top)) 16px 0; flex:none; position:relative; z-index:3}
 .pl-bars i{flex:1; height:3px; border-radius:99px; background:rgba(255,255,255,.25); overflow:hidden}
 .pl-bars i b{display:block; height:100%; width:0; background:#fff; border-radius:99px}
 .pl-head{display:flex; align-items:center; justify-content:space-between; padding:16px 16px 0; flex:none; position:relative; z-index:3}
