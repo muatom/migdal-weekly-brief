@@ -1724,6 +1724,24 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     });
   });
 
+  /* ⚠️ הליבה של ״הקישור לא מעביר לפריט״.
+     קישור פנימי (#slug) שמצביע לפריט בתצוגה השנייה נשבר כך: הדפדפן מתחיל
+     את הניווט לעוגן **בזמן שהתצוגה עדיין display:none**, לא מוצא לאן לגלול,
+     ומוותר. אחר כך JS חושף את התצוגה — והדפדפן כבר לא מנסה שוב.
+
+     הפתרון: לתפוס את הקליק בשלב ה-capture, לחשוף את התצוגה הנכונה, ו**לא**
+     למנוע את ברירת המחדל. הדפדפן עושה את הגלילה בעצמו, על אלמנט שכבר מוצג,
+     ומכבד scroll-margin-top. גלילה שהדפדפן יוזם עובדת גם היכן שגלילה
+     שסקריפט יוזם חסומה — webview מוטמע, תצוגה מקדימה, טאב ברקע. */
+  document.addEventListener("click", function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var slug = decodeURIComponent(a.getAttribute("href") || "").slice(1);
+    if (!slug || slug === "ai") return;
+    var it = bySlug[slug];
+    if (it && it.view !== curView) setView(it.view, { keepScroll:true });
+  }, true);
+
   window.addEventListener("scroll", onScrollChip, { passive:true });
   window.addEventListener("resize", onScrollChip);
 
@@ -1848,7 +1866,6 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
       var a = document.createElement("a");
       a.href = "#" + s;
       a.textContent = it.title;
-      a.addEventListener("click", function(e){ e.preventDefault(); goTo(s); });
       li.appendChild(a);
       var m = document.createElement("span");
       m.style.color = "rgba(255,255,255,.6)";
