@@ -1735,13 +1735,11 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     setTimeout(function(){ el.classList.remove("is-target"); }, 2500);
     markRead(slug);
 
-    /* מיקום מחושב ולא scrollIntoView — כדי לא להיות תלויים ב-scroll-margin
-       ובגובה הדר שמשתנה לפי רוחב המסך. */
+    /* scrollIntoView ולא window.scrollTo: בדפדפנים מוטמעים (webview באפליקציה,
+       תצוגה מקדימה) scrollTo הוא no-op שקט, ו-scrollIntoView עובד. ההיסט מתחת
+       להדר הדביק מגיע מ-scroll-margin-top שכבר מוגדר על .card ועל .lead. */
     function jump(behavior){
-      var head = document.querySelector("header.siteheader");
-      var pad  = (head ? head.offsetHeight : 60) + 16;
-      var y    = el.getBoundingClientRect().top + window.scrollY - pad;
-      window.scrollTo({ top: Math.max(0, y), behavior: behavior });
+      el.scrollIntoView({ block:"start", behavior: behavior });
     }
 
     /* ⚠️ מעבר תצוגה משנה את גובה המסמך, וגם פונטים שעדיין נטענים מזיזים אותו.
