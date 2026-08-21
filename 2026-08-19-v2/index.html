@@ -1659,7 +1659,8 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
      ואינו מנסה שוב אחרי ש-JS חושף אותה. זה היה הבאג ״הלינק לא מעביר אותי לפריט״. */
   function goTo(slug){
     var it = bySlug[slug];
-    if (it && it.view !== curView) setView(it.view, { keepScroll:true });
+    var switched = !!(it && it.view !== curView);
+    if (switched) setView(it.view, { keepScroll:true });
     var el = document.getElementById(slug);
     if (!el) return;
     var det = el.querySelector ? el.querySelector("details") : null;
@@ -1668,14 +1669,27 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     setTimeout(function(){ el.classList.remove("is-target"); }, 2500);
     markRead(slug);
 
-    function jump(smooth){
-      el.scrollIntoView({ block:"start", behavior:(smooth && !reduceMotion) ? "smooth" : "auto" });
+    /* מיקום מחושב ולא scrollIntoView — כדי לא להיות תלויים ב-scroll-margin
+       ובגובה הדר שמשתנה לפי רוחב המסך. */
+    function jump(behavior){
+      var head = document.querySelector("header.siteheader");
+      var pad  = (head ? head.offsetHeight : 60) + 16;
+      var y    = el.getBoundingClientRect().top + window.scrollY - pad;
+      window.scrollTo({ top: Math.max(0, y), behavior: behavior });
     }
-    jump(true);
-    /* הפריסה עדיין זזה — פונטים, תמונות, הרחבה שנפתחה. קפיצה שנייה כשהיא נחה. */
-    requestAnimationFrame(function(){ requestAnimationFrame(function(){ jump(false); }); });
-    if (document.readyState !== "complete"){
-      window.addEventListener("load", function(){ jump(false); }, { once:true });
+
+    /* ⚠️ מעבר תצוגה משנה את גובה המסמך, וגם פונטים שעדיין נטענים מזיזים אותו.
+       גלילה **חלקה** שמתחילה לפני שהפריסה נחה ממשיכה לרוץ אל היעד הישן ודורסת
+       כל תיקון שיבוא אחריה — כך הקישור מרשימת השמורים נחת 296px מעל הפריט.
+       לכן: חלקה רק כשאין מעבר תצוגה והעמוד כבר נטען; אחרת מיידית + תיקון. */
+    var settled = document.readyState === "complete";
+    var smooth  = !switched && settled && !reduceMotion;
+    jump(smooth ? "smooth" : "auto");
+    if (!smooth){
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ jump("auto"); }); });
+      if (!settled){
+        window.addEventListener("load", function(){ jump("auto"); }, { once:true });
+      }
     }
   }
 
