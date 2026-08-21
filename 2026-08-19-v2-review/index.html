@@ -1710,17 +1710,30 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     onScrollChip();
   }
 
+  /* נחיתה על פריט — מכל מקור: מתג, צ׳יפ חפיפה, רשימת השמורים, או קישור שהודבק.
+     ⚠️ הגלילה חייבת להיות מפורשת. הגלילה הטבעית של הדפדפן לעוגן **לא עובדת כאן**:
+     בטעינה קרה תצוגת ה-AI היא hidden, הדפדפן מנסה לגלול לאלמנט שאינו מוצג, נכשל,
+     ואינו מנסה שוב אחרי ש-JS חושף אותה. זה היה הבאג ״הלינק לא מעביר אותי לפריט״. */
   function goTo(slug){
     var it = bySlug[slug];
     if (it && it.view !== curView) setView(it.view, { keepScroll:true });
     var el = document.getElementById(slug);
     if (!el) return;
-    el.scrollIntoView({ block:"start", behavior: reduceMotion ? "auto" : "smooth" });
     var det = el.querySelector ? el.querySelector("details") : null;
     if (det) det.open = true;
     el.classList.add("is-target");
     setTimeout(function(){ el.classList.remove("is-target"); }, 2500);
     markRead(slug);
+
+    function jump(smooth){
+      el.scrollIntoView({ block:"start", behavior:(smooth && !reduceMotion) ? "smooth" : "auto" });
+    }
+    jump(true);
+    /* הפריסה עדיין זזה — פונטים, תמונות, הרחבה שנפתחה. קפיצה שנייה כשהיא נחה. */
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ jump(false); }); });
+    if (document.readyState !== "complete"){
+      window.addEventListener("load", function(){ jump(false); }, { once:true });
+    }
   }
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-view-to]"), function(b){
@@ -1780,6 +1793,8 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
   }
 
   /* ---------- תבנית ההעברה. הסייג נוסע יחד עם העובדה. ---------- */
+  function itemLink(it){ return SITE + "#" + it.slug; }
+
   function itemText(it){
     var L = [];
     L.push("מבט שבועי תחרותי · " + ISSUE);
@@ -1794,8 +1809,8 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     if (!it.verified) L.push("(תאריך הפרסום לא אומת; הקישור מוביל לחיפוש באתר המקור)");
     if (it.signal) L.push("איתות — " + it.signal); /* מה נוחת · מתי · על מי */
     if (it.caveat) L.push("סייג: " + it.caveat);   /* הסייג נוסע עם העובדה */
-    L.push(it.url);
-    L.push("לפריט במבט: " + SITE + "#" + it.slug);
+    L.push("לכתבה במקור: " + it.url);
+    L.push("לפריט במבט: " + itemLink(it));
     return L.join("\n");
   }
 
@@ -1819,21 +1834,21 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     var row = it.el.querySelector("[data-actions]");
     if (!row) return;
 
-    var bCopy = mkBtn("העתק", "העתק את הפריט עם המקור והתאריך");
-    bCopy.addEventListener("click", function(){ copy(itemText(it), "הפריט הועתק עם המקור"); });
+    var bCopy = mkBtn("העתק", "העתק את הפריט — עובדות, מקור, סייג וקישור");
+    bCopy.addEventListener("click", function(){
+      copy(itemText(it), "הפריט הועתק — כולל המקור והקישור");
+    });
 
     var bShare = mkBtn("שתף", "שתף את הפריט");
     bShare.addEventListener("click", function(){
       var text = itemText(it);
       if (navigator.share){
-        navigator.share({ title: it.title, text: text }).catch(function(){});
+        /* url הוא שדה נפרד ב-Web Share API — בלעדיו וואטסאפ וסלאק לא מייצרים תצוגה מקדימה */
+        navigator.share({ title: it.title, text: text, url: itemLink(it) }).catch(function(){});
       } else {
         window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
       }
     });
-
-    var bLink = mkBtn("לינק לפריט", "העתק קישור ישיר לפריט");
-    bLink.addEventListener("click", function(){ copy(SITE + "#" + it.slug, "הקישור לפריט הועתק"); });
 
     var bSave = mkBtn("שמור", "שמור את הפריט לרשימה");
     bSave.setAttribute("aria-pressed", "false");
@@ -1842,7 +1857,6 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
 
     row.appendChild(bCopy); row.appendChild(sep());
     row.appendChild(bShare); row.appendChild(sep());
-    row.appendChild(bLink); row.appendChild(sep());
     row.appendChild(bSave);
   });
 
@@ -1976,26 +1990,13 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     });
   });
 
-  /* ---------- נחיתה על פריט מקישור ---------- */
-  function focusHash(){
-    var h = decodeURIComponent(location.hash || "").slice(1);
-    if (!h) return;
-    var el = document.getElementById(h);
-    if (!el) return;
-    var det = el.querySelector ? el.querySelector("details") : null;
-    if (det) det.open = true;
-    el.classList.add("is-target");
-    setTimeout(function(){ el.classList.remove("is-target"); }, 2500);
-    if (el.id) markRead(el.id);
-  }
   /* ‎#ai הוא כתובת מלאה: לינק קבוע, בוקמארק, ושליחה לרונן */
   function route(){
     var h = decodeURIComponent(location.hash || "").slice(1);
     if (h === "ai"){ setView("ai"); return; }
     if (!h){ setView("main", { keepScroll:true }); return; }
-    var it = bySlug[h];
-    if (it && it.view !== curView) setView(it.view, { keepScroll:true });
-    focusHash();
+    if (bySlug[h] || document.getElementById(h)){ goTo(h); return; }
+    setView("main", { keepScroll:true });
   }
   window.addEventListener("hashchange", route);
 
