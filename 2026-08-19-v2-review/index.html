@@ -1696,6 +1696,7 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
     if (v !== "main" && v !== "ai") v = "main";
     if (v === "ai" && !VIEW_EL.ai) v = "main";
     curView = v;
+    lastLanded = "";
     document.body.setAttribute("data-view", v);
     VIEW_EL.main.hidden = v !== "main";
     if (VIEW_EL.ai) VIEW_EL.ai.hidden = v !== "ai";
@@ -1714,12 +1715,20 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
      ⚠️ הגלילה חייבת להיות מפורשת. הגלילה הטבעית של הדפדפן לעוגן **לא עובדת כאן**:
      בטעינה קרה תצוגת ה-AI היא hidden, הדפדפן מנסה לגלול לאלמנט שאינו מוצג, נכשל,
      ואינו מנסה שוב אחרי ש-JS חושף אותה. זה היה הבאג ״הלינק לא מעביר אותי לפריט״. */
+  var lastLanded = "";
+
   function goTo(slug){
     var it = bySlug[slug];
     var switched = !!(it && it.view !== curView);
     if (switched) setView(it.view, { keepScroll:true });
     var el = document.getElementById(slug);
     if (!el) return;
+    lastLanded = slug;
+    /* ⚠️ הכתובת חייבת לשקף תמיד איפה אנחנו. אחרת התצוגה וה-hash נפרדים,
+       ואירוע hashchange שממתין בתור **דורס מעבר תצוגה חדש ממנו** — כך קישור
+       מרשימת השמורים החזיר את הקורא לתצוגה הראשית מיד אחרי שהגיע למדור.
+       בונוס: אחרי נחיתה, הכתובת בשורת הדפדפן היא הקישור לפריט. */
+    try { if (location.hash !== "#" + slug) location.hash = slug; } catch (e) {}
     var det = el.querySelector ? el.querySelector("details") : null;
     if (det) det.open = true;
     el.classList.add("is-target");
@@ -2007,10 +2016,11 @@ body[data-view="ai"] .viewswitch .thumb{transform:translateX(calc(-100% - 3px))}
   /* ‎#ai הוא כתובת מלאה: לינק קבוע, בוקמארק, ושליחה לרונן */
   function route(){
     var h = decodeURIComponent(location.hash || "").slice(1);
-    if (h === "ai"){ setView("ai"); return; }
-    if (!h){ setView("main", { keepScroll:true }); return; }
+    if (h === "ai"){ if (curView !== "ai") setView("ai"); return; }
+    if (!h){ if (curView !== "main") setView("main", { keepScroll:true }); return; }
+    if (h === lastLanded) return;                 /* כבר נחתנו כאן */
     if (bySlug[h] || document.getElementById(h)){ goTo(h); return; }
-    setView("main", { keepScroll:true });
+    if (curView !== "main") setView("main", { keepScroll:true });
   }
   window.addEventListener("hashchange", route);
 
